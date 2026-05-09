@@ -7,11 +7,6 @@ import { SectionHeader } from '@/components/section-header'
 import { EnquiryForm } from '@/components/enquiry-form'
 import { Mail, Phone, MapPin, Clock } from 'lucide-react'
 
-export const metadata = {
-  title: 'Contact Us | National Public School Kaloor',
-  description: 'Get in touch with National Public School Kaloor. Find our contact information, location, and hours.',
-}
-
 export default function ContactPage() {
   return (
     <>

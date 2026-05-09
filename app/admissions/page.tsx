@@ -8,11 +8,6 @@ import { ContentCard } from '@/components/content-card'
 import { EnquiryForm } from '@/components/enquiry-form'
 import { Check } from 'lucide-react'
 
-export const metadata = {
-  title: 'Admissions | National Public School Kaloor',
-  description: 'Learn about our admission process, eligibility, and how to apply at NPS Kaloor.',
-}
-
 export default function AdmissionsPage() {
   return (
     <>

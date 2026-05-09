@@ -8,11 +8,6 @@ import { ContentCard } from '@/components/content-card'
 import { CTASection } from '@/components/cta-section'
 import { Check, BookOpen } from 'lucide-react'
 
-export const metadata = {
-  title: 'CBSE Board | National Public School Kaloor',
-  description: 'Learn about our CBSE board affiliation and curriculum at NPS Kaloor.',
-}
-
 export default function CBSEPage() {
   return (
     <>

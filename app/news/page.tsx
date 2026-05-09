@@ -6,11 +6,6 @@ import { PageHeader } from '@/components/page-header'
 import { SectionHeader } from '@/components/section-header'
 import { Calendar, User } from 'lucide-react'
 
-export const metadata = {
-  title: 'News & Events | National Public School Kaloor',
-  description: 'Stay updated with latest news, events, and announcements from NPS Kaloor.',
-}
-
 const newsArticles = [
   {
     id: 1,
