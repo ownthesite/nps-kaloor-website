@@ -1,3 +1,5 @@
+'use client'
+
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { SectionHeader } from '@/components/section-header'
@@ -5,12 +7,6 @@ import { ContentCard } from '@/components/content-card'
 import { EnquiryForm } from '@/components/enquiry-form'
 import { CTASection } from '@/components/cta-section'
 import { BookOpen, Users, Trophy, Sparkles } from 'lucide-react'
-
-export const metadata = {
-  title: 'National Public School Kaloor | Premium CBSE Education',
-  description:
-    'Discover premium CBSE education at National Public School Kaloor. Established excellence in academics, sports, and holistic development.',
-}
 
 export default function Home() {
   return (

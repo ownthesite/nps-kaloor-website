@@ -1,11 +1,11 @@
+'use client'
+
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
 import { PageHeader } from '@/components/page-header'
 import { SectionHeader } from '@/components/section-header'
 import { ContentCard } from '@/components/content-card'
 import { CTASection } from '@/components/cta-section'
-
-export const metadata = {
   title: 'About Us | National Public School Kaloor',
   description: 'Learn about our mission, vision, and commitment to education excellence at NPS Kaloor.',
 }
