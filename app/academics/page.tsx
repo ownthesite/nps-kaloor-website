@@ -8,11 +8,6 @@ import { ContentCard } from '@/components/content-card'
 import { CTASection } from '@/components/cta-section'
 import { BookOpen, Users, Lightbulb } from 'lucide-react'
 
-export const metadata = {
-  title: 'Academics | National Public School Kaloor',
-  description: 'Explore our academic programs, curriculum, and teaching methodology at NPS Kaloor.',
-}
-
 export default function AcademicsPage() {
   return (
     <>
