@@ -1,43 +1,61 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Inter, Manrope, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-sans',
+  display: 'swap',
+})
+
+const manrope = Manrope({
+  subsets: ['latin'],
+  variable: '--font-heading',
+  display: 'swap',
+})
+
+const geistMono = Geist_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'National Public School Kaloor | Premium CBSE Education',
   description:
-    'National Public School Kaloor offers quality CBSE education with focus on academics, sports, and holistic development. Established excellence since 1996.',
-  generator: 'v0.app',
+    'National Public School Kaloor offers quality CBSE education with focus on academics, sports, and holistic development.',
+
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
+        url: '/favicon-96x96.png',
+        sizes: '96x96',
+        type: 'image/png',
       },
       {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
+        url: '/favicon.svg',
         type: 'image/svg+xml',
       },
     ],
-    apple: '/apple-icon.png',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
   },
+
+  manifest: '/site.webmanifest',
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
-    <html lang="en" className="bg-background">
-      <body className="font-sans antialiased">
+    <html
+      lang="en"
+      className={`${inter.variable} ${manrope.variable} ${geistMono.variable}`}
+    >
+      <body className="bg-background font-sans text-foreground antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

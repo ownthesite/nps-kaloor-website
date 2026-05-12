@@ -3,6 +3,9 @@
 import { motion } from 'framer-motion'
 import { ReactNode } from 'react'
 
+// The custom easing curve for a premium, buttery-smooth reveal
+const premiumEase = [0.16, 1, 0.3, 1]
+
 interface StaggerContainerProps {
   children: ReactNode
   staggerDelay?: number
@@ -11,18 +14,17 @@ interface StaggerContainerProps {
 
 export function StaggerContainer({
   children,
-  staggerDelay = 0.1,
+  staggerDelay = 0.15,
   delayChildren = 0.2,
 }: StaggerContainerProps) {
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: '-50px' }}
+      viewport={{ once: true, margin: '-100px' }}
       variants={{
-        hidden: { opacity: 0 },
+        hidden: {},
         visible: {
-          opacity: 1,
           transition: {
             staggerChildren: staggerDelay,
             delayChildren,
@@ -43,11 +45,11 @@ export function StaggerItem({ children }: StaggerItemProps) {
   return (
     <motion.div
       variants={{
-        hidden: { opacity: 0, y: 20 },
+        hidden: { opacity: 0, y: 30 },
         visible: {
           opacity: 1,
           y: 0,
-          transition: { ease: 'easeOut', duration: 0.5 },
+          transition: { ease: premiumEase, duration: 0.8 },
         },
       }}
     >

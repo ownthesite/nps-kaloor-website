@@ -117,7 +117,7 @@ export function EnquiryForm() {
       <Button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-primary hover:bg-primary/90 text-white font-semibold"
+        className="w-full bg-slate-900 hover:bg-blue-700  text-white font-semibold"
       >
         {isSubmitting ? 'Submitting...' : 'Submit Enquiry'}
       </Button>
