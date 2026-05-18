@@ -11,7 +11,7 @@ import { Check } from 'lucide-react'
 export default function AdmissionsPage() {
   return (
     <>
-      <Navbar />
+     
 
       <PageHeader
         title="Admissions"
@@ -281,7 +281,7 @@ export default function AdmissionsPage() {
         </div>
       </section>
 
-      <Footer />
+      
     </>
   )
 }

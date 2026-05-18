@@ -3,9 +3,42 @@
 nps-kaloor-website
 ├─ app
 │  ├─ about
-│  │  └─ page.tsx
+│  │  ├─ gallery
+│  │  │  └─ page.tsx
+│  │  ├─ infrastructure
+│  │  │  └─ page.tsx
+│  │  ├─ management
+│  │  │  └─ page.tsx
+│  │  ├─ page.tsx
+│  │  └─ team
+│  │     └─ page.tsx
 │  ├─ academics
-│  │  └─ page.tsx
+│  │  ├─ annual-report
+│  │  │  └─ page.tsx
+│  │  ├─ calendar
+│  │  │  └─ page.tsx
+│  │  ├─ courses
+│  │  │  └─ page.tsx
+│  │  ├─ curriculum
+│  │  │  └─ page.tsx
+│  │  ├─ page.tsx
+│  │  └─ text-books
+│  │     └─ page.tsx
+│  ├─ administration
+│  │  ├─ admissions
+│  │  │  └─ page.tsx
+│  │  ├─ circulars
+│  │  │  └─ page.tsx
+│  │  ├─ fee-structure
+│  │  │  └─ page.tsx
+│  │  ├─ pta
+│  │  │  └─ page.tsx
+│  │  ├─ rules
+│  │  │  └─ page.tsx
+│  │  ├─ smc
+│  │  │  └─ page.tsx
+│  │  └─ students-details
+│  │     └─ page.tsx
 │  ├─ admissions
 │  │  └─ page.tsx
 │  ├─ campus-life
@@ -14,11 +47,20 @@ nps-kaloor-website
 │  │  └─ page.tsx
 │  ├─ contact
 │  │  └─ page.tsx
+│  ├─ downloads
+│  │  ├─ brochure
+│  │  │  └─ page.tsx
+│  │  └─ tc
+│  │     └─ page.tsx
 │  ├─ globals.css
 │  ├─ layout.tsx
+│  ├─ more
+│  │  └─ page.tsx
 │  ├─ news
 │  │  └─ page.tsx
-│  └─ page.tsx
+│  ├─ page.tsx
+│  └─ public-disclosure
+│     └─ page.tsx
 ├─ components
 │  ├─ animations
 │  │  ├─ animated-button.tsx
@@ -31,7 +73,14 @@ nps-kaloor-website
 │  ├─ footer.tsx
 │  ├─ navbar.tsx
 │  ├─ page-header.tsx
+│  ├─ page-title.tsx
 │  ├─ section-header.tsx
+│  ├─ sections
+│  │  ├─ campus-life-section.tsx
+│  │  ├─ experience-section.tsx
+│  │  ├─ hero-section.tsx
+│  │  ├─ mission-vision-section.tsx
+│  │  └─ stats-section.tsx
 │  ├─ theme-provider.tsx
 │  └─ ui
 │     ├─ accordion.tsx
@@ -103,19 +152,20 @@ nps-kaloor-website
 ├─ pnpm-lock.yaml
 ├─ postcss.config.mjs
 ├─ public
-│  ├─ apple-icon.png
-│  ├─ campus.jpg
-│  ├─ hero-classroom.jpg
-│  ├─ icon-dark-32x32.png
-│  ├─ icon-light-32x32.png
-│  ├─ icon.svg
-│  ├─ library.jpg
-│  ├─ placeholder-logo.png
-│  ├─ placeholder-logo.svg
-│  ├─ placeholder-user.jpg
-│  ├─ placeholder.jpg
-│  ├─ placeholder.svg
-│  └─ sports.jpg
+│  ├─ apple-touch-icon.png
+│  ├─ favicon-96x96.png
+│  ├─ favicon.ico
+│  ├─ favicon.svg
+│  ├─ hero-banner
+│  │  ├─ banner_01.webp
+│  │  ├─ banner_02.webp
+│  │  ├─ banner_03.webp
+│  │  ├─ banner_04.webp
+│  │  └─ banner_05.webp
+│  ├─ logo.svg
+│  ├─ site.webmanifest
+│  ├─ web-app-manifest-192x192.png
+│  └─ web-app-manifest-512x512.png
 ├─ README.md
 ├─ styles
 │  └─ globals.css

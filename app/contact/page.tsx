@@ -85,7 +85,7 @@ export default function ContactPage() {
           <div className="mt-12 rounded-xl overflow-hidden shadow-lg h-96 bg-muted border border-border flex items-center justify-center">
             <div className="text-center text-muted-foreground">
               <MapPin size={48} className="mx-auto mb-4 opacity-50" />
-              <p>Interactive map coming soon</p>
+              <p>Interactive map Updating for Academic Year 2026–27</p>
               <p className="text-sm">NPS Kaloor Campus, Kaloor, Kochi, Kerala</p>
             </div>
           </div>

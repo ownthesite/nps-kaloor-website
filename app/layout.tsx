@@ -1,6 +1,13 @@
 import type { Metadata } from 'next'
 import { Inter, Manrope, Geist_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+
+import ScrollToTop from '@/components/scroll-to-top'
+
+
 import './globals.css'
 
 const inter = Inter({
@@ -56,7 +63,15 @@ export default function RootLayout({
       className={`${inter.variable} ${manrope.variable} ${geistMono.variable}`}
     >
       <body className="bg-background font-sans text-foreground antialiased">
-        {children}
+        <ScrollToTop />
+        <Navbar />
+
+        <main>
+          {children}
+        </main>
+
+        <Footer />
+
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
