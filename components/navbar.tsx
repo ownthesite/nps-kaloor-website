@@ -42,7 +42,7 @@ const navItems = [
       { label: "Educational Trust", href: "/about/trust" },
       { label: "Facilities", href: "/about/infrastructure" },
       { label: "Gallery", href: "/about/gallery" },
-      { label: "Annual Report", href: "/about/annual-report" },
+      // { label: "Annual Report", href: "/about/annual-report" },
       
     ],
   },

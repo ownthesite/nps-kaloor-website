@@ -273,8 +273,8 @@ export default function PublicDisclosurePage() {
                   ["Principal Name", "To Be Updated"],
                   ["Principal Qualification", "To Be Updated"],
                   ["Website", "www.npskaloor.com"],
-                  ["Email", "info@npskaloor.com"],
-                  ["Contact Number", "+91-484-2396789"],
+                  ["Email", "nps.kaloor@gmail.com"],
+                  ["Contact Number", "+91-7560 981 234"],
                 ].map(([label, value]) => (
                   <div
                     key={label}

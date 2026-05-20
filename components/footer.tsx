@@ -80,7 +80,7 @@ export function Footer() {
                   href="mailto:info@npskaloor.edu.in"
                   className="text-slate-600 hover:text-slate-900 transition-colors"
                 >
-                  info@npskaloor.com
+                  nps.kaloor@gmail.com
                 </a>
               </li>
             </ul>

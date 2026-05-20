@@ -1,22 +1,13 @@
-import { PageTitle } from '@/components/page-title'
+import { permanentRedirect } from 'next/navigation'
+
+export const metadata = {
+  title: 'Circulars & Notices | NPS Kaloor',
+  description:
+    'Official CBSE circulars, notices, and announcements followed by National Public School Kaloor.',
+}
 
 export default function CircularsPage() {
-  return (
-    <main>
-      <PageTitle
-        title="Circulars & Notices"
-        description="Important circulars, notices, and announcements for parents and students."
-      />
-
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
-            <p className="text-gray-600">
-              Content Updating for Academic Year 2026–27.
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
+  permanentRedirect(
+    'https://cbseacademic.nic.in/circulars.html'
   )
 }
