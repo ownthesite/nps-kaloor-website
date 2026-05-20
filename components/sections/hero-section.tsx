@@ -17,7 +17,7 @@ export default function HeroSection() {
 
       <div className="relative z-10">
         {/* Hero Layout */}
-        <div className="relative min-h-screen overflow-hidden">
+        <div className="relative min-h-[100svh] overflow-hidden">
           {/* Background Image */}
           <motion.div
             initial={{ opacity: 0, scale: 1.03 }}
@@ -39,14 +39,14 @@ export default function HeroSection() {
             />
           </motion.div>
 
-          {/* Left Soft Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/88 to-white/10" />
+          {/* Soft Overlay - Strengthened slightly for mobile text legibility */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/40 sm:via-white/88 sm:to-white/10" />
 
           {/* Bottom Fade */}
           <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white to-transparent" />
 
           {/* Content */}
-          <div className="relative z-20 mx-auto flex min-h-screen max-w-7xl items-center px-4 sm:px-6 lg:px-8">
+          <div className="relative z-20 mx-auto flex min-h-[100svh] max-w-7xl items-center px-4 pt-20 pb-12 sm:px-6 sm:py-0 lg:px-8">
             <div className="max-w-2xl">
               {/* Badge */}
               <motion.div
@@ -58,7 +58,7 @@ export default function HeroSection() {
                 }}
               ></motion.div>
 
-              {/* Heading */}
+              {/* Heading / Logo */}
               <motion.div
                 initial={{ opacity: 0, y: 18 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -67,24 +67,20 @@ export default function HeroSection() {
                   ease: smoothEase,
                   delay: 0.1,
                 }}
-                className="mt-8"
+                className="mt-4 sm:mt-8"
               >
-                <Link href="/" className="inline-block">
+                <Link href="/" className="inline-block w-full">
                   <div
                     className="
-        relative
-
-        h-40
-        sm:h-52
-        lg:h-72
-
-        w-[420px]
-        sm:w-[620px]
-        lg:w-[1000px]
-        
-        
-        
-      "
+                      relative
+                      h-28
+                      sm:h-52
+                      lg:h-72
+                      w-full
+                      max-w-[280px]
+                      sm:max-w-[620px]
+                      lg:max-w-[1000px]
+                    "
                   >
                     <Image
                       src="/logo.svg"
@@ -108,22 +104,22 @@ export default function HeroSection() {
                 }}
                 className="mt-6 max-w-2xl"
               >
-                <p className="text-base font-semibold uppercase tracking-[0.18em] text-blue-700">
-                  CBSE Senior Secondary School • Established 2007
+                <p className="text-xs sm:text-base font-semibold uppercase tracking-[0.18em] text-blue-700">
+                  CBSE Senior Secondary School • Est. 2007
                 </p>
 
-                <h2 className="mt-4 text-2xl sm:text-3xl font-bold leading-tight text-slate-950">
+                <h2 className="mt-3 text-2xl font-bold leading-tight text-slate-950 sm:mt-4 sm:text-3xl">
                   Inspiring Academic Excellence & Holistic Growth
                 </h2>
 
-                <p className="mt-5 text-lg leading-8 text-slate-700">
+                <p className="mt-4 text-base leading-relaxed text-slate-700 sm:mt-5 sm:text-lg sm:leading-8">
                   National Public School, Kaloor is a co-educational CBSE
                   institution dedicated to nurturing confident, disciplined, and
                   future-ready learners through strong academics, innovative
                   learning, and all-round development.
                 </p>
 
-                <p className="mt-4 text-lg leading-8 text-slate-600">
+                <p className="mt-3 text-base leading-relaxed text-slate-600 sm:mt-4 sm:text-lg sm:leading-8">
                   Backed by experienced faculty and a vibrant learning
                   environment, the school empowers every child to discover their
                   talents, build character, and grow with confidence.
@@ -139,7 +135,7 @@ export default function HeroSection() {
                   ease: smoothEase,
                   delay: 0.3,
                 }}
-                className="mt-10 flex flex-col gap-4 sm:flex-row"
+                className="mt-8 flex flex-col gap-3 sm:mt-10 sm:flex-row sm:gap-4"
               >
                 <button
                   onClick={() => {
@@ -147,7 +143,7 @@ export default function HeroSection() {
                       behavior: "smooth",
                     });
                   }}
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-slate-950 px-8 py-4 text-sm font-semibold text-white transition hover:bg-slate-800"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-slate-950 px-8 py-4 text-sm font-semibold text-white transition hover:bg-slate-800 sm:w-auto"
                 >
                   Admission Enquiry
                   <ArrowRight size={18} />
@@ -155,7 +151,7 @@ export default function HeroSection() {
 
                 <a
                   href="/about"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 bg-white/70 px-8 py-4 text-sm font-semibold text-slate-700 backdrop-blur transition hover:bg-white"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-slate-300 bg-white/70 px-8 py-4 text-sm font-semibold text-slate-700 backdrop-blur transition hover:bg-white sm:w-auto"
                 >
                   Explore School
                   <ArrowRight size={18} />
@@ -171,30 +167,25 @@ export default function HeroSection() {
                   ease: smoothEase,
                   delay: 0.4,
                 }}
-                className="mt-14 flex flex-wrap gap-10"
+                className="mt-10 flex flex-wrap gap-6 sm:mt-14 sm:gap-10"
               >
                 <div>
-                  <h3 className="text-4xl font-bold text-slate-950">18+</h3>
-
-                  <p className="mt-2 text-sm text-slate-600">
+                  <h3 className="text-3xl font-bold text-slate-950 sm:text-4xl">18+</h3>
+                  <p className="mt-1 text-xs text-slate-600 sm:mt-2 sm:text-sm">
                     Years of Excellence
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="text-4xl font-bold text-slate-950">CBSE</h3>
-
-                  <p className="mt-2 text-sm text-slate-600">
+                  <h3 className="text-3xl font-bold text-slate-950 sm:text-4xl">CBSE</h3>
+                  <p className="mt-1 text-xs text-slate-600 sm:mt-2 sm:text-sm">
                     National Curriculum
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="text-4xl font-bold text-slate-950">
-                    Holistic
-                  </h3>
-
-                  <p className="mt-2 text-sm text-slate-600">
+                  <h3 className="text-3xl font-bold text-slate-950 sm:text-4xl">Holistic</h3>
+                  <p className="mt-1 text-xs text-slate-600 sm:mt-2 sm:text-sm">
                     Student Development
                   </p>
                 </div>

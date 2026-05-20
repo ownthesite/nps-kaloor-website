@@ -1,6 +1,6 @@
 "use client";
 
-
+import Image from "next/image";
 
 import { SectionHeader } from "@/components/section-header";
 import { EnquiryForm } from "@/components/enquiry-form";
@@ -10,30 +10,31 @@ import { MissionVisionSection } from "@/components/sections/mission-vision-secti
 import { StatsSection } from "@/components/sections/stats-section";
 import { CampusLifeSection } from "@/components/sections/campus-life-section";
 import { ExperienceSection } from "@/components/sections/experience-section";
-
+import LeadershipMessages from '@/components/sections/leadership-messages'
 export default function Home() {
   return (
     <>
-     
-
       {/* Hero Section */}
       <HeroSection />
 
-
-       {/* <StatsSection /> */}
+      {/* <StatsSection /> */}
 
       {/* Mission & Vision Section */}
       <MissionVisionSection />
       {/* Campus Life Section */}
       <CampusLifeSection />
 
-     
       <ExperienceSection />
 
+      <LeadershipMessages />
 
+     
 
       {/* Enquiry Form Section */}
-      <section id="enquiry-form" className="py-20 sm:py-28 bg-slate-50 border-t border-slate-200">
+      <section
+        id="enquiry-form"
+        className="py-20 sm:py-28 bg-slate-50 border-t border-slate-200"
+      >
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeUp>
             <SectionHeader
@@ -48,8 +49,6 @@ export default function Home() {
           </FadeUp>
         </div>
       </section>
-
-      
     </>
   );
 }
