@@ -69,18 +69,18 @@ export default function HeroSection() {
                 }}
                 className="mt-4 sm:mt-8"
               >
-                <Link href="/" className="inline-block w-full">
+                <Link href="/" className="block shrink-0">
                   <img
-                    src="/logo.svg"
+                    src="/logo.png"
                     alt="National Public School Logo"
                     className="
-      w-full
-      max-w-[280px]
-      sm:max-w-[620px]
-      lg:max-w-[1000px]
-      h-auto
-      object-contain
-    "
+                                  w-[180px]
+                                  sm:w-[320px]
+                                  md:w-[500px]
+                                  lg:w-[700px]
+                                  h-auto
+                                  object-contain
+                                "
                   />
                 </Link>
               </motion.div>
