@@ -7,55 +7,56 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navItems = [
-  {
-    label: "Home",
-    href: "/",
-  },
+  { label: "Home", href: "/" },
+
   {
     label: "Academics",
     dropdown: [
       { label: "Courses", href: "/academics/courses" },
       { label: "Curriculum", href: "/academics/curriculum" },
-      { label: "Text Books", href: "/academics/text-books" },
+      { label: "Textbooks", href: "/academics/text-books" },
       { label: "Academic Calendar", href: "/academics/calendar" },
-      { label: "Annual Report", href: "/academics/annual-report" },
     ],
   },
+
   {
     label: "Administration",
     dropdown: [
       { label: "Admissions", href: "/administration/admissions" },
       { label: "Fee Structure", href: "/administration/fee-structure" },
-      { label: "Students Details", href: "/administration/students-details" },
-      { label: "Circulars & Notices", href: "/administration/circulars" },
-      { label: "Rules & Regulations", href: "/administration/rules" },
+      // { label: "Student Information", href: "/administration/students-details" },
+     
       { label: "School Management Committee", href: "/administration/smc" },
       { label: "PTA", href: "/administration/pta" },
+      { label: "Circulars & Notices", href: "/administration/circulars" },
+      { label: "Rules & Regulations", href: "/administration/rules" },
     ],
   },
-  {
-    label: "Public Disclosure",
-    href: "/public-disclosure",
-  },
+
   {
     label: "About Us",
     dropdown: [
       { label: "Our Team", href: "/about/team" },
       { label: "Management", href: "/about/management" },
-      { label: "Infrastructure & Facilities", href: "/about/infrastructure" },
+     
+      { label: "Educational Trust", href: "/about/trust" },
+      { label: "Facilities", href: "/about/infrastructure" },
       { label: "Gallery", href: "/about/gallery" },
+      { label: "Annual Report", href: "/about/annual-report" },
+      
     ],
   },
+
+  {
+    label: "Public Disclosure",
+    href: "/public-disclosure",
+  },
+
   {
     label: "Downloads",
     dropdown: [
-      { label: "Transfer Certificate", href: "/downloads/tc" },
-      { label: "E-Brochure", href: "/downloads/brochure" },
+      { label: "Brochure", href: "/downloads/brochure" },
     ],
-  },
-  {
-    label: "More",
-    href: "/more",
   },
 ];
 

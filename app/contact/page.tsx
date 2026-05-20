@@ -10,7 +10,7 @@ import { Mail, Phone, MapPin, Clock } from 'lucide-react'
 export default function ContactPage() {
   return (
     <>
-      <Navbar />
+      
 
       <PageHeader
         title="Contact Us"
@@ -212,7 +212,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <Footer />
+     
     </>
   )
 }

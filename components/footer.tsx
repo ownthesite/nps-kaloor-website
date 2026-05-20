@@ -34,43 +34,7 @@ export function Footer() {
               Quick Links
             </h4>
 
-            <ul className="space-y-3 text-sm">
-              <li>
-                <Link
-                  href="/"
-                  className="text-slate-600 hover:text-slate-900 transition-colors"
-                >
-                  Home
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="/about"
-                  className="text-slate-600 hover:text-slate-900 transition-colors"
-                >
-                  About Us
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="/academics"
-                  className="text-slate-600 hover:text-slate-900 transition-colors"
-                >
-                  Academics
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="/admissions"
-                  className="text-slate-600 hover:text-slate-900 transition-colors"
-                >
-                  Admissions
-                </Link>
-              </li>
-            </ul>
+           
           </div>
 
           {/* Information */}
@@ -79,43 +43,7 @@ export function Footer() {
               Information
             </h4>
 
-            <ul className="space-y-3 text-sm">
-              <li>
-                <Link
-                  href="/cbse"
-                  className="text-slate-600 hover:text-slate-900 transition-colors"
-                >
-                  CBSE Board
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="/campus-life"
-                  className="text-slate-600 hover:text-slate-900 transition-colors"
-                >
-                  Campus Life
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="/news"
-                  className="text-slate-600 hover:text-slate-900 transition-colors"
-                >
-                  News & Events
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-slate-600 hover:text-slate-900 transition-colors"
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
+           
           </div>
 
           {/* Contact Info */}
@@ -152,7 +80,7 @@ export function Footer() {
                   href="mailto:info@npskaloor.edu.in"
                   className="text-slate-600 hover:text-slate-900 transition-colors"
                 >
-                  info@npskaloor.edu.in
+                  info@npskaloor.com
                 </a>
               </li>
             </ul>
