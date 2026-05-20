@@ -70,26 +70,18 @@ export default function HeroSection() {
                 className="mt-4 sm:mt-8"
               >
                 <Link href="/" className="inline-block w-full">
-                  <div
+                  <img
+                    src="/logo.svg"
+                    alt="National Public School Logo"
                     className="
-                      relative
-                      h-28
-                      sm:h-52
-                      lg:h-72
-                      w-full
-                      max-w-[280px]
-                      sm:max-w-[620px]
-                      lg:max-w-[1000px]
-                    "
-                  >
-                    <Image
-                      src="/logo.svg"
-                      alt="National Public School Logo"
-                      fill
-                      priority
-                      className="object-contain object-left"
-                    />
-                  </div>
+      w-full
+      max-w-[280px]
+      sm:max-w-[620px]
+      lg:max-w-[1000px]
+      h-auto
+      object-contain
+    "
+                  />
                 </Link>
               </motion.div>
 
@@ -170,21 +162,27 @@ export default function HeroSection() {
                 className="mt-10 flex flex-wrap gap-6 sm:mt-14 sm:gap-10"
               >
                 <div>
-                  <h3 className="text-3xl font-bold text-slate-950 sm:text-4xl">18+</h3>
+                  <h3 className="text-3xl font-bold text-slate-950 sm:text-4xl">
+                    18+
+                  </h3>
                   <p className="mt-1 text-xs text-slate-600 sm:mt-2 sm:text-sm">
                     Years of Excellence
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="text-3xl font-bold text-slate-950 sm:text-4xl">CBSE</h3>
+                  <h3 className="text-3xl font-bold text-slate-950 sm:text-4xl">
+                    CBSE
+                  </h3>
                   <p className="mt-1 text-xs text-slate-600 sm:mt-2 sm:text-sm">
                     National Curriculum
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="text-3xl font-bold text-slate-950 sm:text-4xl">Holistic</h3>
+                  <h3 className="text-3xl font-bold text-slate-950 sm:text-4xl">
+                    Holistic
+                  </h3>
                   <p className="mt-1 text-xs text-slate-600 sm:mt-2 sm:text-sm">
                     Student Development
                   </p>
