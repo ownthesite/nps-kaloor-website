@@ -10,7 +10,6 @@ import {
 export function ExperienceSection() {
   return (
     <section className="bg-white py-24 sm:py-28">
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Top Grid */}
@@ -29,13 +28,13 @@ export function ExperienceSection() {
             </p>
 
             <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
-              A Place Where Students Grow with Confidence
+              A School That Feels Like a Second Home
             </h2>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-              NPS Kaloor combines academic excellence, discipline,
-              creativity, and modern learning methods to create
-              a supportive environment where every student can thrive.
+              At NPS Kaloor, students learn in a caring and disciplined
+              environment where academics, values, creativity, and confidence
+              go hand in hand.
             </p>
 
             {/* Highlights */}
@@ -50,12 +49,12 @@ export function ExperienceSection() {
                   <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
 
                     <h3 className="text-lg font-semibold text-slate-900">
-                      CBSE Focused Learning
+                      Meaningful Learning
                     </h3>
 
                     <p className="mt-2 leading-7 text-slate-600">
-                      Strong academic foundation with conceptual and
-                      practical learning approaches.
+                      Lessons are designed to help students understand concepts
+                      clearly, think independently, and enjoy learning.
                     </p>
 
                   </div>
@@ -65,12 +64,12 @@ export function ExperienceSection() {
                   <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
 
                     <h3 className="text-lg font-semibold text-slate-900">
-                      Experienced Faculty
+                      Caring Teachers
                     </h3>
 
                     <p className="mt-2 leading-7 text-slate-600">
-                      Dedicated teachers committed to guiding students
-                      academically and personally.
+                      Our teachers guide, encourage, and support every child
+                      both inside and outside the classroom.
                     </p>
 
                   </div>
@@ -80,12 +79,12 @@ export function ExperienceSection() {
                   <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
 
                     <h3 className="text-lg font-semibold text-slate-900">
-                      Holistic Development
+                      All-Round Growth
                     </h3>
 
                     <p className="mt-2 leading-7 text-slate-600">
-                      Equal importance to academics, discipline,
-                      creativity, sports, and values.
+                      Along with academics, students are encouraged to build
+                      confidence, communication skills, discipline, and values.
                     </p>
 
                   </div>
@@ -95,7 +94,7 @@ export function ExperienceSection() {
             </StaggerContainer>
           </motion.div>
 
-          {/* Right Testimonial Card */}
+          {/* Right Quote Card */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -116,9 +115,8 @@ export function ExperienceSection() {
                 </div>
 
                 <p className="mt-6 text-xl leading-9 text-white/80 md:text-2xl">
-                  NPS Kaloor provides students with the confidence,
-                  discipline, and academic guidance needed to excel
-                  both inside and outside the classroom.
+                  Every child deserves a learning environment where they feel
+                  encouraged, respected, and inspired to grow with confidence.
                 </p>
 
                 <div className="mt-10">
@@ -128,7 +126,7 @@ export function ExperienceSection() {
                   </div>
 
                   <div className="mt-1 text-sm uppercase tracking-[0.18em] text-white/50">
-                    Kerala • CBSE Institution
+                    Kaloor • Kochi
                   </div>
 
                 </div>
@@ -148,11 +146,11 @@ export function ExperienceSection() {
           <div className="mt-20 flex flex-wrap gap-4">
 
             {[
-              "Science Laboratories",
-              "Digital Classrooms",
+              "Science Labs",
+              "Smart Classrooms",
               "Computer Labs",
               "Library",
-              "Sports Facilities",
+              "Sports & Activities",
               "Auditorium",
             ].map((item, i) => (
               <StaggerItem key={i}>

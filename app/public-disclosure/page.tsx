@@ -80,7 +80,7 @@ const academicDocuments = [
   {
     title: "Last Three Year Board Results",
     file: "/disclosures/academics/board-results.pdf",
-    status: "Updating",
+    status: "Active",
   },
   {
     title: "Parent Teacher Association (PTA)",

@@ -24,13 +24,13 @@ export function CampusLifeSection() {
           </p>
 
           <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 md:text-5xl">
-            Learning Beyond the Classroom
+            A Campus That Encourages Curiosity
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-slate-600">
-            NPS Kaloor provides a vibrant academic environment with modern
-            laboratories, digital learning spaces, and a rich library culture
-            designed to nurture curiosity, creativity, and practical learning.
+            From science labs and digital classrooms to reading spaces and
+            activity-based learning, students at NPS Kaloor are encouraged to
+            explore, discover, and learn with confidence every day.
           </p>
         </motion.div>
 
@@ -53,15 +53,17 @@ export function CampusLifeSection() {
             <div className="absolute bottom-0 left-0 p-8 md:p-10">
               <div className="mb-4 inline-flex rounded-full border border-white/10 bg-white/10 px-4 py-1.5 backdrop-blur-md">
                 <span className="text-xs font-semibold uppercase tracking-[0.18em] text-white/80">
-                  Science & Innovation
+                  Practical Learning
                 </span>
               </div>
+
               <h3 className="text-3xl font-bold text-white md:text-4xl">
-                Advanced Laboratory Learning
+                Hands-On Science Experiences
               </h3>
+
               <p className="mt-4 max-w-xl text-base leading-7 text-white/75 md:text-lg">
-                Hands-on practical sessions encourage scientific thinking,
-                experimentation, and collaborative learning among students.
+                Our laboratory sessions help students learn through observation,
+                experiments, teamwork, and real understanding beyond textbooks.
               </p>
             </div>
           </motion.div>
@@ -83,11 +85,12 @@ export function CampusLifeSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
             <div className="absolute bottom-0 left-0 p-6">
               <h3 className="text-2xl font-bold text-white">
-                Digital Learning Spaces
+                Smart Digital Classrooms
               </h3>
+
               <p className="mt-3 max-w-md text-sm leading-7 text-white/75">
-                Modern computer labs equipped to support digital literacy,
-                creativity, and future-ready skills.
+                Computer labs and technology-enabled learning spaces support
+                creativity, communication, and essential digital skills.
               </p>
             </div>
           </motion.div>
@@ -109,11 +112,13 @@ export function CampusLifeSection() {
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
             <div className="absolute bottom-0 left-0 p-6">
               <h3 className="text-2xl font-bold text-white">
-                Resourceful Library
+                A Reading Culture That Inspires
               </h3>
+
               <p className="mt-3 max-w-md text-sm leading-7 text-white/75">
-                A quiet and enriching reading environment that inspires
-                curiosity, imagination, and independent learning.
+                The school library provides a calm and enriching space where
+                students develop reading habits, imagination, and independent
+                learning.
               </p>
             </div>
           </motion.div>

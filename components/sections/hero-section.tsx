@@ -74,13 +74,14 @@ export default function HeroSection() {
                     src="/logo.png"
                     alt="National Public School Logo"
                     className="
-                                  w-[180px]
-                                  sm:w-[320px]
-                                  md:w-[500px]
-                                  lg:w-[700px]
-                                  h-auto
-                                  object-contain
-                                "
+                              w-[220px]
+                              sm:w-[340px]
+                              md:w-[520px]
+                              lg:w-[700px]
+                              h-auto
+                              object-contain
+                              shrink-0
+                            "
                   />
                 </Link>
               </motion.div>
@@ -97,24 +98,23 @@ export default function HeroSection() {
                 className="mt-6 max-w-2xl"
               >
                 <p className="text-xs sm:text-base font-semibold uppercase tracking-[0.18em] text-blue-700">
-                  CBSE Senior Secondary School • Est. 2007
+                  CBSE Senior Secondary School • Kaloor, Kochi
                 </p>
 
-                <h2 className="mt-3 text-2xl font-bold leading-tight text-slate-950 sm:mt-4 sm:text-3xl">
-                  Inspiring Academic Excellence & Holistic Growth
+                <h2 className="mt-3 text-2xl font-bold leading-tight text-slate-950 sm:mt-4 sm:text-4xl">
+                  Strong Values. Confident Futures.
                 </h2>
 
                 <p className="mt-4 text-base leading-relaxed text-slate-700 sm:mt-5 sm:text-lg sm:leading-8">
-                  National Public School, Kaloor is a co-educational CBSE
-                  institution dedicated to nurturing confident, disciplined, and
-                  future-ready learners through strong academics, innovative
-                  learning, and all-round development.
+                  National Public School, Kaloor nurtures students through
+                  disciplined academics, caring mentorship, and meaningful
+                  learning experiences in a safe and supportive environment.
                 </p>
 
                 <p className="mt-3 text-base leading-relaxed text-slate-600 sm:mt-4 sm:text-lg sm:leading-8">
-                  Backed by experienced faculty and a vibrant learning
-                  environment, the school empowers every child to discover their
-                  talents, build character, and grow with confidence.
+                  Located in the heart of Kochi, we help children grow with
+                  confidence, communication skills, creativity, and values that
+                  prepare them for life beyond the classroom.
                 </p>
               </motion.div>
 
@@ -166,7 +166,16 @@ export default function HeroSection() {
                     18+
                   </h3>
                   <p className="mt-1 text-xs text-slate-600 sm:mt-2 sm:text-sm">
-                    Years of Excellence
+                    Years of Trusted Education
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-3xl font-bold text-slate-950 sm:text-4xl">
+                    Kaloor, Ernakulam
+                  </h3>
+                  <p className="mt-1 text-xs text-slate-600 sm:mt-2 sm:text-sm">
+                    Centrally Located Campus
                   </p>
                 </div>
 
@@ -175,16 +184,7 @@ export default function HeroSection() {
                     CBSE
                   </h3>
                   <p className="mt-1 text-xs text-slate-600 sm:mt-2 sm:text-sm">
-                    National Curriculum
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-3xl font-bold text-slate-950 sm:text-4xl">
-                    Holistic
-                  </h3>
-                  <p className="mt-1 text-xs text-slate-600 sm:mt-2 sm:text-sm">
-                    Student Development
+                    Academic & All-Round Excellence
                   </p>
                 </div>
               </motion.div>
