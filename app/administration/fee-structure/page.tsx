@@ -1,180 +1,144 @@
 "use client";
 
-import Link from "next/link";
-import {
-  ArrowRight,
-  BadgeIndianRupee,
-  CalendarDays,
-  Download,
-  FileText,
-  Info,
-} from "lucide-react";
+import { BadgeIndianRupee } from "lucide-react";
 
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-
-const feeCategories = [
-  {
-    title: "Admission Fee",
-    description: "One-time admission fee applicable during enrollment.",
-  },
-  {
-    title: "Tuition Fee",
-    description: "Monthly tuition fee applicable for the academic year.",
-  },
-  {
-    title: "Annual Fee",
-    description: "Annual institutional and academic facility charges.",
-  },
-  {
-    title: "Transport Fee",
-    description: "Applicable for students availing school transportation.",
-  },
-];
+import { Badge } from "@/components/ui/badge";
 
 export default function FeeStructurePage() {
   return (
-    <main className="bg-white">
-      {/* Hero */}
-      {/* Fee Structure Table */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mb-10">
-            <div className="flex items-center gap-3 mb-5">
-              <BadgeIndianRupee className="h-6 w-6 text-slate-700" />
+    <main className="bg-[#f7f8fc]">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#1d2555] via-[#2c3575] to-[#4b57b6]">
+        {/* Glow Effects */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute -left-20 top-0 h-72 w-72 rounded-full bg-white blur-3xl" />
+          <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-blue-200 blur-3xl" />
+        </div>
 
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
-                Fee Structure (2026–27)
-              </h2>
-            </div>
+        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+          <div className="max-w-3xl">
+            <Badge className="mb-6 border border-white/20 bg-white/10 px-4 py-1 text-white backdrop-blur-sm hover:bg-white/10">
+              Academic Year 2026–27
+            </Badge>
 
-            <p className="text-slate-600 leading-8">
-              Quarterly fee structure applicable for the academic year 2026–27.
+            <h1 className="text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Fee Structure
+            </h1>
+
+            <p className="mt-6 max-w-2xl text-base leading-8 text-slate-200 sm:text-lg">
+              Detailed quarterly fee structure applicable for the academic year
+              2026–27, including tuition fees and academic-related charges for
+              all classes.
             </p>
           </div>
+        </div>
+      </section>
 
-          <Card className="rounded-3xl border border-slate-200 shadow-none overflow-hidden">
-            <CardContent className="p-0 overflow-x-auto">
-              <table className="w-full min-w-[900px] border-collapse">
+      {/* Fee Structure Table */}
+      <section className="py-16 sm:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Intro Card */}
+          <div className="relative mb-10 overflow-hidden rounded-[32px] bg-gradient-to-br from-[#1d2555] via-[#2c3575] to-[#4b57b6] px-6 py-10 sm:px-10 sm:py-14">
+            <div className="absolute inset-0 opacity-20">
+              <div className="absolute -left-10 top-0 h-52 w-52 rounded-full bg-white blur-3xl" />
+              <div className="absolute bottom-0 right-0 h-52 w-52 rounded-full bg-blue-200 blur-3xl" />
+            </div>
+
+            <div className="relative max-w-3xl">
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 backdrop-blur-sm">
+                <BadgeIndianRupee className="h-4 w-4 text-white" />
+
+                <span className="text-sm font-medium tracking-wide text-white">
+                  Academic Year 2026–27
+                </span>
+              </div>
+
+              <h2 className="text-3xl font-black tracking-tight text-white sm:text-4xl">
+                Quarterly Fee Structure
+              </h2>
+
+              <p className="mt-5 max-w-2xl text-base leading-8 text-slate-200 sm:text-lg">
+                The following fee structure is applicable for the current
+                academic year and is payable in quarterly terms.
+              </p>
+            </div>
+          </div>
+
+          {/* Table */}
+          <Card className="overflow-hidden rounded-[32px] border border-slate-200 bg-white shadow-sm">
+            <CardContent className="overflow-x-auto p-0">
+              <table className="w-full border-collapse">
                 <thead>
-                  <tr className="bg-slate-50 border-b border-slate-200">
-                    <th className="px-6 py-5 text-left text-sm font-semibold text-slate-900 border-r border-slate-200">
+                  <tr className="border-b border-slate-200 bg-slate-50">
+                    <th className="border-r border-slate-200 px-6 py-5 text-left text-sm font-bold uppercase tracking-wide text-slate-900">
                       Class
                     </th>
 
-                    <th className="px-6 py-5 text-left text-sm font-semibold text-slate-900 border-r border-slate-200">
-                      Fee Type
+                    <th className="border-r border-slate-200 px-6 py-5 text-center text-sm font-bold uppercase tracking-wide text-slate-900">
+                      I Term
                     </th>
 
-                    {["I", "II", "III", "IV"].map((term) => (
-                      <th
-                        key={term}
-                        className="px-6 py-5 text-center text-sm font-semibold text-slate-900 border-r border-slate-200 last:border-r-0"
-                      >
-                        {term}
-                      </th>
-                    ))}
+                    <th className="border-r border-slate-200 px-6 py-5 text-center text-sm font-bold uppercase tracking-wide text-slate-900">
+                      II, III & IV Term
+                    </th>
+
+                    <th className="px-6 py-5 text-center text-sm font-bold uppercase tracking-wide text-slate-900">
+                      Total Annual Fees
+                    </th>
                   </tr>
                 </thead>
 
                 <tbody>
                   {[
                     {
-                      className: "LKG – UKG",
-                      tuition: 3650,
-                      other: 1400,
-                      total: 5050,
-                    },
-                    {
                       className: "I – IV",
-                      tuition: 3800,
-                      other: 1550,
-                      total: 5350,
+                      firstTerm: 6550,
+                      otherTerms: 4200,
+                      total: 19150,
                     },
                     {
                       className: "V – VIII",
-                      tuition: 4100,
-                      other: 1450,
-                      total: 5550,
+                      firstTerm: 6850,
+                      otherTerms: 4500,
+                      total: 20350,
                     },
                     {
                       className: "IX – X",
-                      tuition: 4250,
-                      other: 1650,
-                      total: 5900,
+                      firstTerm: 7400,
+                      otherTerms: 4750,
+                      total: 21650,
                     },
                     {
                       className: "XI – XII",
-                      tuition: 4700,
-                      other: 1500,
-                      total: 6200,
+                      firstTerm: 7700,
+                      otherTerms: 5200,
+                      total: 23300,
                     },
-                  ].flatMap((item) => [
-                    /* Tuition */
+                  ].map((item, index) => (
                     <tr
-                      key={`${item.className}-tuition`}
-                      className="border-b border-slate-200"
+                      key={item.className}
+                      className={`border-b border-slate-200 transition-colors hover:bg-slate-50 ${
+                        index % 2 === 0 ? "bg-white" : "bg-slate-50/40"
+                      }`}
                     >
-                      <td
-                        rowSpan={3}
-                        className="px-6 py-5 text-sm font-semibold text-slate-900 border-r border-slate-200 align-middle bg-slate-50"
-                      >
+                      <td className="border-r border-slate-200 px-6 py-6 text-sm font-bold text-slate-900">
                         {item.className}
                       </td>
 
-                      <td className="px-6 py-4 text-sm font-medium text-slate-700 border-r border-slate-200">
-                        Tuition Fee
+                      <td className="border-r border-slate-200 px-6 py-6 text-center text-sm font-medium text-slate-700">
+                        ₹{item.firstTerm.toLocaleString()}
                       </td>
 
-                      {[1, 2, 3, 4].map((term) => (
-                        <td
-                          key={`${item.className}-tuition-${term}`}
-                          className="px-6 py-4 text-center text-sm text-slate-700 border-r border-slate-200 last:border-r-0"
-                        >
-                          ₹{item.tuition}
-                        </td>
-                      ))}
-                    </tr>,
-
-                    /* Other */
-                    <tr
-                      key={`${item.className}-other`}
-                      className="border-b border-slate-200"
-                    >
-                      <td className="px-6 py-4 text-sm font-medium text-slate-700 border-r border-slate-200">
-                        Other Fee
+                      <td className="border-r border-slate-200 px-6 py-6 text-center text-sm font-medium text-slate-700">
+                        ₹{item.otherTerms.toLocaleString()}
                       </td>
 
-                      {[1, 2, 3, 4].map((term) => (
-                        <td
-                          key={`${item.className}-other-${term}`}
-                          className="px-6 py-4 text-center text-sm text-slate-700 border-r border-slate-200 last:border-r-0"
-                        >
-                          ₹{item.other}
-                        </td>
-                      ))}
-                    </tr>,
-
-                    /* Total */
-                    <tr
-                      key={`${item.className}-total`}
-                      className="border-b border-slate-200 bg-slate-50"
-                    >
-                      <td className="px-6 py-4 text-sm font-bold text-slate-900 border-r border-slate-200">
-                        Total
+                      <td className="px-6 py-6 text-center text-base font-black text-[#2c3575]">
+                        ₹{item.total.toLocaleString()}
                       </td>
-
-                      {[1, 2, 3, 4].map((term) => (
-                        <td
-                          key={`${item.className}-total-${term}`}
-                          className="px-6 py-4 text-center text-sm font-bold text-slate-900 border-r border-slate-200 last:border-r-0"
-                        >
-                          ₹{item.total}
-                        </td>
-                      ))}
-                    </tr>,
-                  ])}
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </CardContent>

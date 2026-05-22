@@ -7,7 +7,7 @@ import {
   FileText,
   GraduationCap,
   ShieldCheck,
-  Users,
+ Users,
 } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
@@ -52,30 +52,30 @@ const safetyDocuments = [
   {
     title: "Fire Safety Certificate",
     file: "/disclosures/safety/fire-safety.pdf",
-    status: "To Be Updated",
+    status: "Active",
   },
   {
     title: "Building Safety Certificate",
     file: "/disclosures/safety/building-safety.pdf",
-    status: "To Be Updated",
+    status: "Active",
   },
   {
     title: "Health & Sanitation Certificate",
     file: "/disclosures/safety/health-sanitation.pdf",
-    status: "To Be Updated",
+    status: "Active",
   },
 ];
 
 const academicDocuments = [
   {
     title: "Academic Calendar (2026–27)",
-    file: "#",
-    status: "Updating",
+    file: "/disclosures/academics/academic-calendar-2026-27.pdf",
+    status: "Active",
   },
   {
     title: "Fee Structure (2026–27)",
-    file: "#",
-    status: "Updating",
+    file: "/disclosures/academics/fee-structure-2026-27.pdf",
+    status: "Active",
   },
   {
     title: "Last Three Year Board Results",
@@ -156,7 +156,9 @@ function DocumentCard({
             View
           </Link>
         ) : (
-          <span className="text-sm text-slate-400">Updating for Academic Year 2026–27</span>
+          <span className="text-sm text-slate-400">
+            Updating Soon
+          </span>
         )}
       </CardContent>
     </Card>
@@ -184,7 +186,7 @@ export default function PublicDisclosurePage() {
             </p>
 
             <p className="mt-4 text-sm text-slate-500">
-              Last Updated: May 2026
+              Updated for Academic Year 2026–27
             </p>
           </div>
         </div>
@@ -198,7 +200,9 @@ export default function PublicDisclosurePage() {
               <CardContent className="p-6">
                 <BadgeCheck className="h-6 w-6 text-slate-700 mb-4" />
 
-                <p className="text-sm text-slate-500">Affiliation Number</p>
+                <p className="text-sm text-slate-500">
+                  Affiliation Number
+                </p>
 
                 <h3 className="mt-1 text-2xl font-bold text-slate-900">
                   931245
@@ -210,7 +214,9 @@ export default function PublicDisclosurePage() {
               <CardContent className="p-6">
                 <GraduationCap className="h-6 w-6 text-slate-700 mb-4" />
 
-                <p className="text-sm text-slate-500">Classes</p>
+                <p className="text-sm text-slate-500">
+                  Classes
+                </p>
 
                 <h3 className="mt-1 text-2xl font-bold text-slate-900">
                   I – XII
@@ -222,7 +228,9 @@ export default function PublicDisclosurePage() {
               <CardContent className="p-6">
                 <Building2 className="h-6 w-6 text-slate-700 mb-4" />
 
-                <p className="text-sm text-slate-500">Curriculum</p>
+                <p className="text-sm text-slate-500">
+                  Curriculum
+                </p>
 
                 <h3 className="mt-1 text-2xl font-bold text-slate-900">
                   CBSE
@@ -234,7 +242,9 @@ export default function PublicDisclosurePage() {
               <CardContent className="p-6">
                 <Users className="h-6 w-6 text-slate-700 mb-4" />
 
-                <p className="text-sm text-slate-500">UDISE Code</p>
+                <p className="text-sm text-slate-500">
+                  UDISE Code
+                </p>
 
                 <h3 className="mt-1 text-xl font-bold text-slate-900">
                   32080301517
@@ -263,18 +273,30 @@ export default function PublicDisclosurePage() {
             <CardContent className="p-0">
               <div className="divide-y divide-slate-200">
                 {[
-                  ["School Name", "National Public School, Kaloor"],
+                  ["School Name", "National Public School (NPS)"],
                   ["Affiliation Number", "931245"],
-                  ["School Code", "To Be Updated"],
+                  ["Recognition Code", "7790/2023-H4"],
                   ["UDISE Code", "32080301517"],
                   ["Classes", "I – XII"],
                   ["Board", "Central Board of Secondary Education (CBSE)"],
-                  ["Address", "Deshabhimani Road, Kaloor, Kochi, Kerala"],
-                  ["Principal Name", "To Be Updated"],
-                  ["Principal Qualification", "To Be Updated"],
+                  ["School Status", "Senior Secondary Level"],
+                  ["School Type", "Independent"],
+                  ["Year of Foundation", "2007"],
+                  ["Date of First Opening", "06 January 2007"],
+                  [
+                    "Address",
+                    "Deshabhimani Road, Kaloor, Kochi, Kerala - 682017",
+                  ],
+                  ["Principal Name", "Ms. Simi Shamawas"],
+                  [
+                    "Principal Qualification",
+                    "M.A, M.Ed, M.Phil Education, Ph.D in Education",
+                  ],
+                  ["Managing Trust", "Kaloor Muslim Jama-ath Educational and Charitable Trust"],
                   ["Website", "www.npskaloor.com"],
                   ["Email", "nps.kaloor@gmail.com"],
                   ["Contact Number", "+91-7560 981 234"],
+                  ["Affiliation Validity", "01/04/2025 to 31/03/2030"],
                 ].map(([label, value]) => (
                   <div
                     key={label}
@@ -367,20 +389,26 @@ export default function PublicDisclosurePage() {
               </h2>
 
               <p className="mt-4 text-slate-600 leading-7">
-                Staff information and teaching details for the academic year
-                2026–27 will be updated shortly.
+                Staff and faculty information for the current academic year.
               </p>
 
               <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                {["PGT", "TGT", "PRT", "Counsellor"].map((item) => (
+                {[
+                  ["Administrative Experience", "5 Years"],
+                  ["Teaching Experience", "25 Years"],
+                  ["School Level", "Senior Secondary"],
+                  ["Board", "CBSE"],
+                ].map(([label, value]) => (
                   <div
-                    key={item}
+                    key={label}
                     className="rounded-2xl border border-slate-200 p-5"
                   >
-                    <p className="text-sm text-slate-500">{item}</p>
+                    <p className="text-sm text-slate-500">
+                      {label}
+                    </p>
 
                     <h3 className="mt-2 text-xl font-bold text-slate-900">
-                      To Be Updated
+                      {value}
                     </h3>
                   </div>
                 ))}
@@ -400,27 +428,32 @@ export default function PublicDisclosurePage() {
               </h2>
 
               <p className="mt-4 text-slate-600 leading-7">
-                Infrastructure information for the current academic year is
-                being updated.
+                Infrastructure and facility details as per school recognition
+                records.
               </p>
 
               <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {[
-                  "Campus Area",
-                  "Classrooms",
-                  "Laboratories",
-                  "Library",
-                  "Smart Classrooms",
-                  "Sports Facilities",
-                ].map((item) => (
+                  ["Campus Area", "4330.13 Sq m"],
+                  ["Built-up Area", "1263.2 Sq m"],
+                  ["Playground Area", "3066.78 Sq m"],
+                  ["Classrooms", "24"],
+                  ["Office / Store Rooms", "2"],
+                  ["Boys & Girls Toilets", "19 + 28"],
+                  ["Drinking Water", "Available"],
+                  ["Barrier-Free Access", "Available"],
+                  ["Mid-Day Meal Kitchen", "Not Available"],
+                ].map(([label, value]) => (
                   <div
-                    key={item}
+                    key={label}
                     className="rounded-2xl border border-slate-200 p-5"
                   >
-                    <p className="text-sm text-slate-500">{item}</p>
+                    <p className="text-sm text-slate-500">
+                      {label}
+                    </p>
 
                     <h3 className="mt-2 text-lg font-semibold text-slate-900">
-                      To Be Updated
+                      {value}
                     </h3>
                   </div>
                 ))}

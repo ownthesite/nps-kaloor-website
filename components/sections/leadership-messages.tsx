@@ -31,7 +31,6 @@ export default function LeadershipMessages() {
           <div className="group relative overflow-hidden rounded-[2.5rem] border border-slate-800 bg-slate-900 p-8 sm:p-10 shadow-xl shadow-slate-200/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-slate-900/20">
             <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-            {/* Image on Right */}
             <div className="relative flex flex-col lg:flex-row-reverse gap-10 items-center lg:items-center">
 
               {/* Image */}
@@ -54,22 +53,25 @@ export default function LeadershipMessages() {
                   T E Bilal
                 </h3>
 
-                <p className="mt-2 text-xl font-medium italic text-slate-400">
+                <p className="mt-2 text-xl font-medium italic !text-slate-400">
                   Chairman
                 </p>
 
-                <div className="mt-6 space-y-5 text-[17px] leading-relaxed text-slate-300">
+                {/* FIXED TEXT COLOR */}
+                <div className="mt-6 space-y-5 text-[17px] leading-relaxed [&_p]:!text-slate-300">
                   <p>
                     Welcome to National Public School. When we started this
                     school in Kaloor back in 2007, my dream was very simple.
                     I wanted to build a place where parents can send their
                     children with complete peace of mind.
                   </p>
+
                   <p>
                     For me, education is not just about scoring marks. It is
                     about teaching our children to respect their elders,
                     speak with kindness, and walk with good discipline.
                   </p>
+
                   <p>
                     We treat every child here as our own. We make sure they
                     are safe, loved, and guided properly every single day.
@@ -88,7 +90,6 @@ export default function LeadershipMessages() {
           <div className="group relative overflow-hidden rounded-[2.5rem] border border-slate-800 bg-slate-900 p-8 sm:p-10 shadow-xl shadow-slate-200/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-slate-900/20">
             <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-            {/* Image on Left */}
             <div className="relative flex flex-col lg:flex-row gap-10 items-center lg:items-center">
 
               {/* Image */}
@@ -111,11 +112,12 @@ export default function LeadershipMessages() {
                   ADV. E S M Kabeer
                 </h3>
 
-                <p className="mt-2 text-xl font-medium italic text-slate-400">
+                <p className="mt-2 text-xl font-medium italic !text-slate-400">
                   Manager
                 </p>
 
-                <div className="mt-6 space-y-5 text-[17px] leading-relaxed text-slate-300">
+                {/* FIXED TEXT COLOR */}
+                <div className="mt-6 space-y-5 text-[17px] leading-relaxed [&_p]:!text-slate-300">
                   <p>
                     It is with profound joy and immense pleasure to say that
                     for the last more than 14 years National Public School,
@@ -123,12 +125,14 @@ export default function LeadershipMessages() {
                     Charitable Trust acquired a glorious past to serve the
                     society.
                   </p>
+
                   <p>
                     One can appreciate, the school was established to uplift
                     the education to the poor and needy. The students so far
                     proved their caliber not only in academics but also in
                     extracurricular activities.
                   </p>
+
                   <p>
                     I appreciate the dedication and devotion of the principal,
                     teachers and non-teaching staffs. I place on record the
@@ -148,7 +152,6 @@ export default function LeadershipMessages() {
           <div className="group relative overflow-hidden rounded-[2.5rem] border border-slate-800 bg-slate-900 p-8 sm:p-10 shadow-xl shadow-slate-200/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-slate-900/20">
             <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-            {/* Image on Right (Zig-Zag) */}
             <div className="relative flex flex-col lg:flex-row-reverse gap-10 items-center lg:items-center">
 
               {/* Image */}
@@ -171,33 +174,38 @@ export default function LeadershipMessages() {
                   Ms. Simi Shamnawas
                 </h3>
 
-                <p className="mt-2 text-xl font-medium italic text-slate-400">
+                <p className="mt-2 text-xl font-medium italic !text-slate-400">
                   Principal
                 </p>
 
-                <div className="mt-6 space-y-5 text-[17px] leading-relaxed text-slate-300">
+                {/* FIXED TEXT COLOR */}
+                <div className="mt-6 space-y-5 text-[17px] leading-relaxed [&_p]:!text-slate-300">
                   <p>
                     I am both proud and privileged to lead a community
                     dedicated to foster a love for learning, character
                     development and lifelong success.
                   </p>
+
                   <p>
                     At National Public School we believe that education is
                     more than just academics, it's about inspiring curiosity,
                     nurturing talents and building confidence.
                   </p>
+
                   <p>
                     Our commitment is to provide a safe, inclusive and dynamic
                     environment where students can explore their passions,
                     develop critical thinking and grow into responsible
                     global citizens.
                   </p>
+
                   <p>
                     We strive to ensure that each student is given the support
                     and encouragement to reach their full potential with a
                     diverse range of programs, dedicated faculty and
                     state-of-the-art facilities.
                   </p>
+
                   <p>
                     We are committed to cultivate not only academic excellence
                     but also empathy, creativity and leadership skills.

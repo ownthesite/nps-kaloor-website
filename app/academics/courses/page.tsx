@@ -105,20 +105,27 @@ export default function CoursesPage() {
   return (
     <main className="bg-white">
       {/* Hero */}
-      <section className="border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#1d2555] via-[#2c3575] to-[#4b57b6]">
+        {/* Glow Effects */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute -left-20 top-0 h-72 w-72 rounded-full bg-white blur-3xl" />
+          <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-blue-200 blur-3xl" />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
           <div className="max-w-3xl">
-            <Badge className="mb-5 bg-slate-100 text-slate-700 hover:bg-slate-100">
+            <Badge className="mb-6 border border-white/20 bg-white/10 px-4 py-1 text-white backdrop-blur-sm hover:bg-white/10">
               CBSE Curriculum
             </Badge>
 
-            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900">
+            <h1 className="text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
               Courses & Academic Programs
             </h1>
 
-            <p className="mt-5 text-base sm:text-lg leading-8 text-slate-600">
-              Structured academic programs designed to support intellectual,
-              creative, and personal growth from Kindergarten to Class XII.
+            <p className="mt-6 max-w-2xl text-base leading-8 text-slate-200 sm:text-lg">
+              Comprehensive academic programs designed to nurture intellectual,
+              creative, and personal development from Kindergarten through Senior
+              Secondary education under the CBSE curriculum.
             </p>
           </div>
         </div>

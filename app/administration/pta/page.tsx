@@ -111,26 +111,31 @@ export default function PTAPage() {
   return (
     <main className="bg-white">
       {/* Hero Section */}
-      <section className="border-b border-slate-200 bg-[#34346b]">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#1d2555] via-[#2c3575] to-[#4b57b6]">
+        {/* Glow Effects */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute -left-20 top-0 h-72 w-72 rounded-full bg-white blur-3xl" />
+          <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-blue-200 blur-3xl" />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
           <div className="max-w-3xl">
-            <Badge className="mb-5 bg-white/10 text-white hover:bg-white/10">
+            <Badge className="mb-6 border border-white/20 bg-white/10 px-4 py-1 text-white backdrop-blur-sm hover:bg-white/10">
               Academic Year 2025–2026
             </Badge>
 
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+            <h1 className="text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
               Parent Teacher Association
             </h1>
 
-            <p className="mt-5 text-base leading-8 text-slate-200 sm:text-lg">
-              Parent Teacher Association members of National Public School
-              Kaloor working together to strengthen collaboration between
-              parents, teachers, and the school community.
+            <p className="mt-6 max-w-2xl text-base leading-8 text-slate-200 sm:text-lg">
+              Building a strong partnership between parents, teachers, and the school
+              community to support student growth, learning, and overall development
+              at National Public School Kaloor.
             </p>
           </div>
         </div>
       </section>
-
       {/* PTA Table */}
       <section className="bg-slate-50 py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

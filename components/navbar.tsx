@@ -3,22 +3,34 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+
+import {
+  Menu,
+  X,
+  ChevronDown,
+  GraduationCap,
+} from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 
 const navItems = [
   { label: "Home", href: "/" },
+
   {
     label: "Administration",
     dropdown: [
       { label: "Admissions", href: "/administration/admissions" },
       { label: "Fee Structure", href: "/administration/fee-structure" },
-      { label: "School Management Committee", href: "/administration/smc" },
+      {
+        label: "School Management Committee",
+        href: "/administration/smc",
+      },
       { label: "PTA", href: "/administration/pta" },
       { label: "Circulars & Notices", href: "/administration/circulars" },
       { label: "Rules & Regulations", href: "/administration/rules" },
     ],
   },
+
   {
     label: "Academics",
     dropdown: [
@@ -28,6 +40,7 @@ const navItems = [
       { label: "Academic Calendar", href: "/academics/calendar" },
     ],
   },
+
   {
     label: "About Us",
     dropdown: [
@@ -38,10 +51,12 @@ const navItems = [
       { label: "Gallery", href: "/about/gallery" },
     ],
   },
+
   {
     label: "Public Disclosure",
     href: "/public-disclosure",
   },
+
   {
     label: "Downloads",
     dropdown: [
@@ -53,74 +68,120 @@ const navItems = [
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Prevent background scrolling when mobile menu is open
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
-    return () => { document.body.style.overflow = 'unset'; };
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
   }, [isOpen]);
 
   const handleScrollToEnquiry = () => {
     setIsOpen(false);
+
     const form = document.getElementById("enquiry-form");
-    form?.scrollIntoView({ behavior: "smooth" });
+
+    form?.scrollIntoView({
+      behavior: "smooth",
+    });
   };
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-slate-200/70 bg-white/90 backdrop-blur-xl">
-      <div className="mx-auto max-w-[90rem] px-4 sm:px-6 lg:px-12">
-        {/* Adjusted height for mobile vs desktop */}
-        <div className="flex h-20 items-center justify-between lg:h-36">
-          
+    <nav className="sticky top-0 z-50 border-b border-slate-200/60 bg-white/80 backdrop-blur-2xl">
+      <div className="mx-auto max-w-[92rem] px-4 sm:px-6 lg:px-10">
+        {/* Navbar */}
+        <div className="flex h-20 items-center justify-between lg:h-24">
           {/* Logo */}
           <Link
             href="/"
-            className="flex w-[200px] shrink-0 items-center justify-start lg:w-[260px]"
+            className="flex shrink-0 items-center gap-3"
           >
-            <div className="relative h-12 w-full transition-transform duration-300 hover:scale-[1.02] lg:h-24">
+            <div className="relative h-14 w-14 overflow-hidden ">
               <Image
                 src="/favicon.svg"
                 alt="National Public School Logo"
                 fill
                 priority
-                className="object-contain object-left lg:object-left"
+                className="object-contain p-2"
               />
+            </div>
+
+            <div className="hidden sm:block">
+              <h2 className="text-lg font-black tracking-tight text-slate-900 lg:text-xl">
+                National Public School
+              </h2>
+
+              <p className="text-sm font-medium text-slate-500">
+                Kaloor, Kochi
+              </p>
             </div>
           </Link>
 
-          {/* Desktop Nav */}
-          <div className="hidden items-center gap-0.5 lg:flex xl:gap-1">
+          {/* Desktop Navigation */}
+          <div className="hidden items-center gap-1 lg:flex">
             {navItems.map((item) => (
-              <div key={item.label} className="group relative">
+              <div
+                key={item.label}
+                className="group relative"
+              >
                 {item.dropdown ? (
                   <>
-                    <button className="flex items-center gap-1 rounded-xl px-4 py-3 text-[15px] font-medium text-slate-700 transition-all duration-200 hover:bg-slate-100 hover:text-blue-600 xl:px-5">
+                    <button className="flex items-center gap-1 rounded-2xl px-5 py-3 text-[15px] font-semibold text-slate-700 transition-all duration-200 hover:bg-slate-100 hover:text-[#2c3575]">
                       {item.label}
-                      <ChevronDown size={16} className="transition-transform duration-200 group-hover:rotate-180" />
+
+                      <ChevronDown
+                        size={16}
+                        className="transition-transform duration-300 group-hover:rotate-180"
+                      />
                     </button>
 
-                    {/* Dropdown - Added focus-within for accessibility and pointer-events logic */}
-                    <div className="invisible absolute left-0 top-full pt-3 opacity-0 pointer-events-none transition-all duration-200 group-hover:visible group-hover:opacity-100 group-hover:pointer-events-auto focus-within:visible focus-within:opacity-100 focus-within:pointer-events-auto">
-                      <div className="min-w-[260px] rounded-2xl border border-slate-200 bg-white p-3 shadow-[0_20px_50px_rgba(15,23,42,0.08)]">
-                        {item.dropdown.map((subItem) => (
-                          <Link
-                            key={subItem.href}
-                            href={subItem.href}
-                            className="block rounded-xl px-4 py-3 text-sm font-medium text-slate-600 transition-colors hover:bg-slate-50 hover:text-blue-600 focus:bg-slate-50 focus:text-blue-600 focus:outline-none"
-                          >
-                            {subItem.label}
-                          </Link>
-                        ))}
+                    {/* Dropdown */}
+                    <div className="invisible absolute left-0 top-full z-50 pt-4 opacity-0 pointer-events-none transition-all duration-200 group-hover:visible group-hover:opacity-100 group-hover:pointer-events-auto">
+                      <div className="min-w-[290px] overflow-hidden rounded-[28px] border border-slate-200 bg-white p-3 shadow-[0_20px_60px_rgba(15,23,42,0.12)]">
+                        {/* Header */}
+                        <div className="mb-3 rounded-2xl bg-gradient-to-r from-[#1d2555] to-[#5564d8] p-4 text-white">
+                          <div className="flex items-center gap-3">
+                            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 backdrop-blur-sm">
+                              <GraduationCap className="h-5 w-5" />
+                            </div>
+
+                            <div>
+                              <h3 className="text-sm font-bold tracking-wide">
+                                {item.label}
+                              </h3>
+
+                              <p className="mt-1 text-xs text-white/80">
+                                Explore sections
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Links */}
+                        <div className="space-y-1">
+                          {item.dropdown.map((subItem) => (
+                            <Link
+                              key={subItem.href}
+                              href={subItem.href}
+                              className="group/item flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold text-slate-600 transition-all duration-200 hover:bg-slate-50 hover:text-[#2c3575]"
+                            >
+                              <span>{subItem.label}</span>
+
+                              <ChevronDown className="h-4 w-4 -rotate-90 opacity-0 transition-all duration-200 group-hover/item:translate-x-1 group-hover/item:opacity-100" />
+                            </Link>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </>
                 ) : (
                   <Link
                     href={item.href!}
-                    className="rounded-xl px-3 py-3 text-[15px] font-medium text-slate-700 transition-all duration-200 hover:bg-slate-100 hover:text-blue-600 xl:px-4"
+                    className="rounded-2xl px-5 py-3 text-[15px] font-semibold text-slate-700 transition-all duration-200 hover:bg-slate-100 hover:text-[#2c3575]"
                   >
                     {item.label}
                   </Link>
@@ -130,9 +191,9 @@ export function Navbar() {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <Button
-              className="h-12 rounded-2xl bg-slate-950 px-6 text-sm font-semibold text-white transition-all hover:bg-blue-700"
+              className="h-12 rounded-2xl bg-gradient-to-r from-[#1d2555] to-[#5564d8] px-7 text-sm font-bold text-white shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl"
               onClick={handleScrollToEnquiry}
             >
               Enquire Now
@@ -142,30 +203,50 @@ export function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="rounded-xl p-2 text-slate-800 transition hover:bg-slate-100 lg:hidden"
+            className="flex h-12 w-12 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-800 shadow-sm transition hover:bg-slate-50 lg:hidden"
             aria-label="Toggle menu"
           >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
+            {isOpen ? (
+              <X size={24} />
+            ) : (
+              <Menu size={24} />
+            )}
           </button>
         </div>
 
-        {/* Mobile Nav - Added max-height and scrollability */}
+        {/* Mobile Navigation */}
         {isOpen && (
-          <div className="absolute left-0 right-0 top-20 max-h-[calc(100vh-5rem)] overflow-y-auto overscroll-contain border-b border-t border-slate-200 bg-white py-5 shadow-2xl lg:hidden">
-            <div className="space-y-1 px-4 sm:px-6">
+          <div className="absolute left-0 right-0 top-20 max-h-[calc(100vh-5rem)] overflow-y-auto border-b border-t border-slate-200 bg-white shadow-2xl lg:hidden">
+            {/* Top Banner */}
+            <div className="bg-gradient-to-r from-[#1d2555] to-[#5564d8] px-6 py-6 text-white">
+              <h2 className="text-xl font-black tracking-tight">
+                National Public School
+              </h2>
+
+              <p className="mt-1 text-sm text-white/80">
+                Kaloor, Kochi
+              </p>
+            </div>
+
+            {/* Nav Items */}
+            <div className="space-y-2 px-5 py-5">
               {navItems.map((item) => (
-                <div key={item.label}>
+                <div
+                  key={item.label}
+                  className="rounded-2xl border border-slate-100 bg-slate-50/70"
+                >
                   {item.dropdown ? (
-                    <div className="px-2 py-2">
-                      <div className="mb-2 text-base font-semibold text-slate-900">
+                    <div className="p-4">
+                      <div className="mb-3 text-base font-black text-slate-900">
                         {item.label}
                       </div>
-                      <div className="ml-3 space-y-1 border-l-2 border-slate-100 pl-4">
+
+                      <div className="space-y-1 border-l-2 border-slate-200 pl-4">
                         {item.dropdown.map((subItem) => (
                           <Link
                             key={subItem.href}
                             href={subItem.href}
-                            className="block py-2.5 text-sm font-medium text-slate-600 transition-colors hover:text-blue-600"
+                            className="block py-2 text-sm font-semibold text-slate-600 transition-colors hover:text-[#2c3575]"
                             onClick={() => setIsOpen(false)}
                           >
                             {subItem.label}
@@ -176,7 +257,7 @@ export function Navbar() {
                   ) : (
                     <Link
                       href={item.href!}
-                      className="block rounded-xl px-2 py-3 text-base font-semibold text-slate-900 transition hover:bg-slate-50 hover:text-blue-600"
+                      className="block px-4 py-4 text-base font-bold text-slate-900 transition hover:text-[#2c3575]"
                       onClick={() => setIsOpen(false)}
                     >
                       {item.label}
@@ -186,9 +267,9 @@ export function Navbar() {
               ))}
 
               {/* Mobile CTA */}
-              <div className="px-2 pt-6 pb-8">
+              <div className="pt-4 pb-8">
                 <Button
-                  className="h-12 w-full rounded-2xl bg-slate-950 text-base font-semibold text-white hover:bg-blue-700"
+                  className="h-14 w-full rounded-2xl bg-gradient-to-r from-[#1d2555] to-[#5564d8] text-base font-bold text-white shadow-lg"
                   onClick={handleScrollToEnquiry}
                 >
                   Enquire Now

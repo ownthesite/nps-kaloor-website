@@ -126,62 +126,78 @@ const committeeMembers = [
 
 export default function SMCPage() {
   return (
-    <main className="bg-white">
-      {/* Hero Section */}
-      <section className="border-b border-slate-200 bg-[#34346b]">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+    <main className="bg-[#f7f8fc]">
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#1d2555] via-[#2c3575] to-[#4b57b6]">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute -left-20 top-0 h-72 w-72 rounded-full bg-white blur-3xl" />
+          <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-blue-200 blur-3xl" />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
           <div className="max-w-3xl">
-            <Badge className="mb-5 bg-white/10 text-white hover:bg-white/10">
+            <Badge className="mb-6 border border-white/20 bg-white/10 px-4 py-1 text-white backdrop-blur-sm hover:bg-white/10">
               Academic Year 2026–2027
             </Badge>
 
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+            <h1 className="text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
               School Management Committee
             </h1>
 
-            <p className="mt-5 text-base leading-8 text-slate-200 sm:text-lg">
-              Meet the management committee members of National Public School
-              Kaloor guiding the institution with leadership, vision, and
-              commitment.
+            <p className="mt-6 max-w-2xl text-base leading-8 text-slate-200 sm:text-lg">
+              Dedicated leaders and educators guiding National Public School
+              Kaloor with integrity, responsibility, and a shared vision for
+              excellence in education.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Committee Members */}
-      <section className="bg-slate-50 py-16 sm:py-20">
+      {/* Members */}
+      <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
-              Our Management
+          <div className="mb-14 text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              Our Leadership Team
             </h2>
 
-            <p className="mt-3 text-slate-600">
-              Managing Committee Members 2026–2027
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-600">
+              Experienced mentors and management members working together to
+              nurture a strong academic and value-driven environment.
             </p>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {committeeMembers.map((member) => (
               <Card
                 key={member.name}
-                className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-none transition-all duration-300 hover:-translate-y-1 hover:border-slate-300"
+                className="group overflow-hidden rounded-[30px] border border-slate-200/80 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
               >
-                <div className="relative aspect-[4/5] overflow-hidden bg-slate-100">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
+                {/* Image Area */}
+                <div className="relative bg-gradient-to-br from-slate-100 to-slate-200 px-6 pt-8">
+                  {/* Decorative Shape */}
+                  <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-r from-[#2c3575] to-[#5564d8]" />
+
+                  {/* Passport Photo Frame */}
+                  <div className="relative mx-auto h-[290px] w-[220px] overflow-hidden rounded-[28px] border-[6px] border-white bg-white shadow-xl">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
                 </div>
 
-                <CardContent className="p-5">
-                  <h3 className="text-lg font-bold uppercase tracking-wide text-slate-900">
+                {/* Content */}
+                <CardContent className="px-6 pb-7 pt-6 text-center">
+                  <h3 className="text-lg font-black uppercase tracking-[0.12em] text-slate-900">
                     {member.name}
                   </h3>
 
-                  <p className="mt-2 text-sm font-medium uppercase tracking-wide text-slate-600">
+                  <div className="mx-auto mt-4 h-[2px] w-12 rounded-full bg-gradient-to-r from-[#2c3575] to-[#5564d8]" />
+
+                  <p className="mt-4 text-sm font-semibold uppercase tracking-[0.18em] text-[#4b57b6]">
                     {member.role}
                   </p>
                 </CardContent>
