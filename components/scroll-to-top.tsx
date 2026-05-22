@@ -1,16 +1,17 @@
-// components/scroll-to-top.tsx
-'use client'
+"use client";
 
-import { useEffect } from 'react'
-import { usePathname } from 'next/navigation'
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
-export default function ScrollToTop() {
-  const pathname = usePathname()
+export function ScrollToTop() {
+  const pathname = usePathname();
 
   useEffect(() => {
-    window.history.scrollRestoration = 'manual'
-    window.scrollTo(0, 0)
-  }, [pathname])
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+  }, [pathname]);
 
-  return null
+  return null;
 }

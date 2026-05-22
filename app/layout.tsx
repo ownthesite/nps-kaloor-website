@@ -5,7 +5,7 @@ import { Analytics } from '@vercel/analytics/next'
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 
-import ScrollToTop from '@/components/scroll-to-top'
+import { ScrollToTop } from "@/components/scroll-to-top";
 
 
 import './globals.css'

@@ -2,7 +2,16 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+
+import {
+  useState,
+  useEffect,
+} from "react";
+
+import {
+  usePathname,
+  useRouter,
+} from "next/navigation";
 
 import {
   Menu,
@@ -68,6 +77,18 @@ const navItems = [
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const pathname = usePathname();
+
+  const router = useRouter();
+
+  /* FIX SCROLL POSITION ISSUE */
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+    setIsOpen(false);
+  }, [pathname]);
+
+  /* BODY LOCK */
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -90,6 +111,19 @@ export function Navbar() {
     });
   };
 
+  const handleNavigate = (href: string) => {
+    setIsOpen(false);
+
+    router.push(href);
+
+    requestAnimationFrame(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "instant",
+      });
+    });
+  };
+
   return (
     <nav className="sticky top-0 z-50 border-b border-slate-200/60 bg-white/80 backdrop-blur-2xl">
       <div className="mx-auto max-w-[92rem] px-4 sm:px-6 lg:px-10">
@@ -98,9 +132,10 @@ export function Navbar() {
           {/* Logo */}
           <Link
             href="/"
+            scroll={true}
             className="flex shrink-0 items-center gap-3"
           >
-            <div className="relative h-14 w-14 overflow-hidden ">
+            <div className="relative h-14 w-14 overflow-hidden">
               <Image
                 src="/favicon.svg"
                 alt="National Public School Logo"
@@ -164,15 +199,17 @@ export function Navbar() {
                         {/* Links */}
                         <div className="space-y-1">
                           {item.dropdown.map((subItem) => (
-                            <Link
+                            <button
                               key={subItem.href}
-                              href={subItem.href}
-                              className="group/item flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-semibold text-slate-600 transition-all duration-200 hover:bg-slate-50 hover:text-[#2c3575]"
+                              onClick={() =>
+                                handleNavigate(subItem.href)
+                              }
+                              className="group/item flex w-full items-center justify-between rounded-2xl px-4 py-3 text-left text-sm font-semibold text-slate-600 transition-all duration-200 hover:bg-slate-50 hover:text-[#2c3575]"
                             >
                               <span>{subItem.label}</span>
 
                               <ChevronDown className="h-4 w-4 -rotate-90 opacity-0 transition-all duration-200 group-hover/item:translate-x-1 group-hover/item:opacity-100" />
-                            </Link>
+                            </button>
                           ))}
                         </div>
                       </div>
@@ -181,6 +218,7 @@ export function Navbar() {
                 ) : (
                   <Link
                     href={item.href!}
+                    scroll={true}
                     className="rounded-2xl px-5 py-3 text-[15px] font-semibold text-slate-700 transition-all duration-200 hover:bg-slate-100 hover:text-[#2c3575]"
                   >
                     {item.label}
@@ -243,25 +281,27 @@ export function Navbar() {
 
                       <div className="space-y-1 border-l-2 border-slate-200 pl-4">
                         {item.dropdown.map((subItem) => (
-                          <Link
+                          <button
                             key={subItem.href}
-                            href={subItem.href}
-                            className="block py-2 text-sm font-semibold text-slate-600 transition-colors hover:text-[#2c3575]"
-                            onClick={() => setIsOpen(false)}
+                            onClick={() =>
+                              handleNavigate(subItem.href)
+                            }
+                            className="block w-full py-2 text-left text-sm font-semibold text-slate-600 transition-colors hover:text-[#2c3575]"
                           >
                             {subItem.label}
-                          </Link>
+                          </button>
                         ))}
                       </div>
                     </div>
                   ) : (
-                    <Link
-                      href={item.href!}
-                      className="block px-4 py-4 text-base font-bold text-slate-900 transition hover:text-[#2c3575]"
-                      onClick={() => setIsOpen(false)}
+                    <button
+                      onClick={() =>
+                        handleNavigate(item.href!)
+                      }
+                      className="block w-full px-4 py-4 text-left text-base font-bold text-slate-900 transition hover:text-[#2c3575]"
                     >
                       {item.label}
-                    </Link>
+                    </button>
                   )}
                 </div>
               ))}
