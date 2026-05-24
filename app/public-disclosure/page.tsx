@@ -454,37 +454,46 @@ export default function PublicDisclosurePage() {
 
       {/* Staff */}
       <section className="pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="rounded-3xl border border-slate-200 shadow-none">
-            <CardContent className="p-8 sm:p-10">
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
-                Staff Details
-              </h2>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Card className="rounded-3xl border border-slate-200 shadow-none">
+      <CardContent className="p-8 sm:p-10">
+        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
+          Staff Details
+        </h2>
 
-              <p className="mt-4 text-slate-600 leading-7">
-                Staff and faculty information for the current academic year.
+        <p className="mt-4 text-slate-600 leading-7">
+          Staff and faculty information for the current academic year as per
+          school records and public disclosure data.
+        </p>
+
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            ['Total Staff', '40'],
+            ['Teaching Staff', '33'],
+            ['Non-Teaching Staff', '7'],
+            ['PGT Teachers', '20'],
+            ['TGT Teachers', '7'],
+            ['PRT Teachers', '1'],
+            ['Special / Activity Staff', '5'],
+          ].map(([label, value]) => (
+            <div
+              key={label}
+              className="rounded-2xl border border-slate-200 bg-white p-5"
+            >
+              <p className="text-sm font-medium text-slate-500">
+                {label}
               </p>
 
-              <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                {staffDetails.map(([label, value]) => (
-                  <div
-                    key={label}
-                    className="rounded-2xl border border-slate-200 p-5"
-                  >
-                    <p className="text-sm text-slate-500">
-                      {label}
-                    </p>
-
-                    <h3 className="mt-2 text-xl font-bold text-slate-900">
-                      {value}
-                    </h3>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
+              <h3 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">
+                {value}
+              </h3>
+            </div>
+          ))}
         </div>
-      </section>
+      </CardContent>
+    </Card>
+  </div>
+</section>
 
       {/* Infrastructure */}
       <section className="pb-20">
