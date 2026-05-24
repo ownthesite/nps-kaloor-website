@@ -41,7 +41,7 @@ const generalInformation = [
     "Address",
     "Deshabhimani Road, Kaloor, Kochi, Kerala - 682017",
   ],
-  ["Principal Name", "Updating Soon"],
+  ["Principal Name", "Ms. Simi Shamnawas"],
   [
     "Principal Qualification",
     "M.A, M.Ed, M.Phil Education, Ph.D in Education",
@@ -52,7 +52,7 @@ const generalInformation = [
   ],
   ["Website", "https://www.npskaloor.com"],
   ["Email", "nps.kaloor@gmail.com"],
-  ["Contact Number", "+91-99999 99999"],
+  ["Contact Number", "0484-2539088"],
   ["Affiliation Validity", "01/04/2025 to 31/03/2030"],
 ];
 
