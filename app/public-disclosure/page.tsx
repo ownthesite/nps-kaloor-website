@@ -7,7 +7,10 @@ import {
   FileText,
   GraduationCap,
   ShieldCheck,
- Users,
+  Users,
+  MonitorSmartphone,
+  Library,
+  FlaskConical,
 } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
@@ -19,6 +22,39 @@ export const metadata = {
   description:
     "CBSE mandatory public disclosure information for National Public School Kaloor.",
 };
+
+const generalInformation = [
+  ["School Name", "National Public School (NPS)"],
+  ["Affiliation Number", "931245"],
+  ["Recognition Code", "7790/2023-H4"],
+  ["UDISE Code", "32080301517"],
+  ["School Code", "76221"],
+  ["Board", "Central Board of Secondary Education (CBSE)"],
+  ["School Status", "Senior Secondary Level"],
+  ["School Type", "Independent"],
+  ["School Category", "Co-Educational"],
+  ["Medium of Instruction", "English"],
+  ["Classes Offered", "Std I to XII"],
+  ["Year of Foundation", "2007"],
+  ["Date of First Opening", "06 January 2007"],
+  [
+    "Address",
+    "Deshabhimani Road, Kaloor, Kochi, Kerala - 682017",
+  ],
+  ["Principal Name", "Updating Soon"],
+  [
+    "Principal Qualification",
+    "M.A, M.Ed, M.Phil Education, Ph.D in Education",
+  ],
+  [
+    "Managing Trust",
+    "Kaloor Muslim Jama-ath Educational and Charitable Trust",
+  ],
+  ["Website", "https://www.npskaloor.com"],
+  ["Email", "nps.kaloor@gmail.com"],
+  ["Contact Number", "+91-99999 99999"],
+  ["Affiliation Validity", "01/04/2025 to 31/03/2030"],
+];
 
 const statutoryDocuments = [
   {
@@ -94,8 +130,37 @@ const academicDocuments = [
   },
 ];
 
+const staffDetails = [
+  ["Administrative Experience", "5 Years"],
+  ["Teaching Experience", "25 Years"],
+  ["School Level", "Senior Secondary"],
+  ["Board", "CBSE"],
+];
+
+const infrastructureDetails = [
+  ["Campus Area", "4330.13 Sq m"],
+  ["Built-up Area", "1263.2 Sq m"],
+  ["Playground Area", "3066.78 Sq m"],
+  ["Classrooms", "24"],
+  ["Office / Store Rooms", "2"],
+  ["Boys & Girls Toilets", "19 + 28"],
+  ["Drinking Water", "Available"],
+  ["Barrier-Free Access", "Available"],
+  ["Mid-Day Meal Kitchen", "Not Available"],
+  ["Laboratories", "5"],
+  [
+    "Labs Available",
+    "Chemistry, Physics, Biology, Mathematics & Computer",
+  ],
+  ["Smart Classrooms", "1"],
+  ["Library", "1"],
+];
+
 function StatusBadge({ status }: { status: string }) {
-  if (status === "Active") {
+  if (
+    status === "Active" ||
+    status.includes("Valid")
+  ) {
     return (
       <Badge className="bg-emerald-100 text-emerald-700 hover:bg-emerald-100">
         {status}
@@ -111,8 +176,16 @@ function StatusBadge({ status }: { status: string }) {
     );
   }
 
+  if (status === "Updating") {
+    return (
+      <Badge className="bg-amber-100 text-amber-700 hover:bg-amber-100">
+        {status}
+      </Badge>
+    );
+  }
+
   return (
-    <Badge className="bg-amber-100 text-amber-700 hover:bg-amber-100">
+    <Badge className="bg-slate-100 text-slate-700 hover:bg-slate-100">
       {status}
     </Badge>
   );
@@ -215,7 +288,7 @@ export default function PublicDisclosurePage() {
                 <GraduationCap className="h-6 w-6 text-slate-700 mb-4" />
 
                 <p className="text-sm text-slate-500">
-                  Classes
+                  Classes Offered
                 </p>
 
                 <h3 className="mt-1 text-2xl font-bold text-slate-900">
@@ -272,32 +345,7 @@ export default function PublicDisclosurePage() {
           <Card className="mt-8 rounded-2xl border border-slate-200 shadow-none overflow-hidden">
             <CardContent className="p-0">
               <div className="divide-y divide-slate-200">
-                {[
-                  ["School Name", "National Public School (NPS)"],
-                  ["Affiliation Number", "931245"],
-                  ["Recognition Code", "7790/2023-H4"],
-                  ["UDISE Code", "32080301517"],
-                  ["Classes", "I – XII"],
-                  ["Board", "Central Board of Secondary Education (CBSE)"],
-                  ["School Status", "Senior Secondary Level"],
-                  ["School Type", "Independent"],
-                  ["Year of Foundation", "2007"],
-                  ["Date of First Opening", "06 January 2007"],
-                  [
-                    "Address",
-                    "Deshabhimani Road, Kaloor, Kochi, Kerala - 682017",
-                  ],
-                  ["Principal Name", "Ms. Simi Shamawas"],
-                  [
-                    "Principal Qualification",
-                    "M.A, M.Ed, M.Phil Education, Ph.D in Education",
-                  ],
-                  ["Managing Trust", "Kaloor Muslim Jama-ath Educational and Charitable Trust"],
-                  ["Website", "www.npskaloor.com"],
-                  ["Email", "nps.kaloor@gmail.com"],
-                  ["Contact Number", "+91-7560 981 234"],
-                  ["Affiliation Validity", "01/04/2025 to 31/03/2030"],
-                ].map(([label, value]) => (
+                {generalInformation.map(([label, value]) => (
                   <div
                     key={label}
                     className="grid sm:grid-cols-3 gap-4 px-6 py-5"
@@ -307,7 +355,32 @@ export default function PublicDisclosurePage() {
                     </div>
 
                     <div className="sm:col-span-2 text-sm sm:text-base text-slate-900">
-                      {value}
+                      {label === "Website" ? (
+                        <a
+                          href={value}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 hover:underline"
+                        >
+                          {value}
+                        </a>
+                      ) : label === "Email" ? (
+                        <a
+                          href={`mailto:${value}`}
+                          className="text-blue-600 hover:underline"
+                        >
+                          {value}
+                        </a>
+                      ) : label === "Contact Number" ? (
+                        <a
+                          href={`tel:${value}`}
+                          className="text-blue-600 hover:underline"
+                        >
+                          {value}
+                        </a>
+                      ) : (
+                        value
+                      )}
                     </div>
                   </div>
                 ))}
@@ -359,7 +432,7 @@ export default function PublicDisclosurePage() {
 
             <Separator />
 
-            {/* Academics */}
+            {/* Academic */}
             <div>
               <div className="flex items-center gap-3 mb-5">
                 <CalendarDays className="h-5 w-5 text-slate-700" />
@@ -393,12 +466,7 @@ export default function PublicDisclosurePage() {
               </p>
 
               <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                {[
-                  ["Administrative Experience", "5 Years"],
-                  ["Teaching Experience", "25 Years"],
-                  ["School Level", "Senior Secondary"],
-                  ["Board", "CBSE"],
-                ].map(([label, value]) => (
+                {staffDetails.map(([label, value]) => (
                   <div
                     key={label}
                     className="rounded-2xl border border-slate-200 p-5"
@@ -433,17 +501,7 @@ export default function PublicDisclosurePage() {
               </p>
 
               <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {[
-                  ["Campus Area", "4330.13 Sq m"],
-                  ["Built-up Area", "1263.2 Sq m"],
-                  ["Playground Area", "3066.78 Sq m"],
-                  ["Classrooms", "24"],
-                  ["Office / Store Rooms", "2"],
-                  ["Boys & Girls Toilets", "19 + 28"],
-                  ["Drinking Water", "Available"],
-                  ["Barrier-Free Access", "Available"],
-                  ["Mid-Day Meal Kitchen", "Not Available"],
-                ].map(([label, value]) => (
+                {infrastructureDetails.map(([label, value]) => (
                   <div
                     key={label}
                     className="rounded-2xl border border-slate-200 p-5"
@@ -457,6 +515,45 @@ export default function PublicDisclosurePage() {
                     </h3>
                   </div>
                 ))}
+              </div>
+
+              <div className="mt-10 grid sm:grid-cols-3 gap-4">
+                <div className="rounded-2xl border border-slate-200 p-6">
+                  <FlaskConical className="h-6 w-6 text-slate-700 mb-4" />
+
+                  <h3 className="font-semibold text-slate-900">
+                    Laboratories
+                  </h3>
+
+                  <p className="mt-2 text-sm text-slate-600">
+                    Chemistry, Physics, Biology, Mathematics &
+                    Computer Labs.
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-slate-200 p-6">
+                  <MonitorSmartphone className="h-6 w-6 text-slate-700 mb-4" />
+
+                  <h3 className="font-semibold text-slate-900">
+                    Smart Classroom
+                  </h3>
+
+                  <p className="mt-2 text-sm text-slate-600">
+                    Technology-enabled smart classroom facility available.
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-slate-200 p-6">
+                  <Library className="h-6 w-6 text-slate-700 mb-4" />
+
+                  <h3 className="font-semibold text-slate-900">
+                    Library
+                  </h3>
+
+                  <p className="mt-2 text-sm text-slate-600">
+                    Dedicated school library facility available.
+                  </p>
+                </div>
               </div>
             </CardContent>
           </Card>

@@ -54,7 +54,6 @@ const navItems = [
     label: "About Us",
     dropdown: [
       { label: "Our Team", href: "/about/team" },
-      { label: "Management", href: "/about/management" },
       { label: "Educational Trust", href: "/about/trust" },
       { label: "Facilities", href: "/about/infrastructure" },
       { label: "Gallery", href: "/about/gallery" },
