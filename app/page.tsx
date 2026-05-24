@@ -12,11 +12,14 @@ import { StatsSection } from "@/components/sections/stats-section";
 import { CampusLifeSection } from "@/components/sections/campus-life-section";
 import { ExperienceSection } from "@/components/sections/experience-section";
 import LeadershipMessages from '@/components/sections/leadership-messages'
+import { BrochurePopup } from "@/components/brochure-popup";
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
       <HeroSection />
+
+      <BrochurePopup />
 
       {/* <StatsSection /> */}
 

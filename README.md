@@ -43,25 +43,11 @@ nps-kaloor-website
 │  │  │  └─ page.tsx
 │  │  └─ students-details
 │  │     └─ page.tsx
-│  ├─ admissions
-│  │  └─ page.tsx
-│  ├─ campus-life
-│  │  └─ page.tsx
-│  ├─ cbse
-│  │  └─ page.tsx
-│  ├─ contact
-│  │  └─ page.tsx
 │  ├─ downloads
-│  │  ├─ brochure
-│  │  │  └─ page.tsx
-│  │  └─ tc
+│  │  └─ brochure
 │  │     └─ page.tsx
 │  ├─ globals.css
 │  ├─ layout.tsx
-│  ├─ more
-│  │  └─ page.tsx
-│  ├─ news
-│  │  └─ page.tsx
 │  ├─ page.tsx
 │  └─ public-disclosure
 │     └─ page.tsx
@@ -84,6 +70,7 @@ nps-kaloor-website
 │  │  ├─ campus-life-section.tsx
 │  │  ├─ experience-section.tsx
 │  │  ├─ hero-section.tsx
+│  │  ├─ leadership-messages.tsx
 │  │  ├─ mission-vision-section.tsx
 │  │  └─ stats-section.tsx
 │  ├─ theme-provider.tsx
@@ -816,10 +803,12 @@ nps-kaloor-website
 │  │  ├─ banner_03.webp
 │  │  ├─ banner_04.webp
 │  │  └─ banner_05.webp
+│  ├─ logo.png
 │  ├─ logo.svg
 │  ├─ management
 │  │  ├─ aa-nizamudheen.jpeg
 │  │  ├─ adv-esm-kabeer-haji.jpeg
+│  │  ├─ adv-esm-kabeer-haji.jpg
 │  │  ├─ kk-abdulsalam.jpeg
 │  │  ├─ km-sherief.jpeg
 │  │  ├─ ms-aboobakker-haji.jpeg
@@ -828,6 +817,7 @@ nps-kaloor-website
 │  │  ├─ pa-noushad-haji.jpeg
 │  │  ├─ ph-ismail.jpeg
 │  │  ├─ siddique-cy.jpeg
+│  │  ├─ simi-shamnawas.jpg
 │  │  ├─ te-bilal.jpeg
 │  │  ├─ ti-shameer.jpeg
 │  │  ├─ va-ashraf.jpeg
