@@ -17,427 +17,470 @@ export const metadata = {
 const teachingStaff = [
   {
     slNo: 1,
-    name: 'Ms. SIMI SHAMNAWAS',
-    qualification: 'MSc, B.Ed, SET, DCA',
-    subject: 'Zoology',
-    category: 'PGT',
+    name: 'SIMI SHAMNAWAS',
+    designation: 'PRINCIPAL',
+    qualification: 'M.Sc',
+    professionalQualification: 'B.Ed',
   },
   {
     slNo: 2,
-    name: 'SHAMLA K.B',
-    qualification: 'M.Sc, B.Ed',
-    subject: 'Social Science',
-    category: 'PGT',
+    name: 'SHEEJA K.V.',
+    designation: 'VICE PRINCIPAL',
+    qualification: 'M.Sc',
+    professionalQualification: 'B.Ed',
   },
   {
     slNo: 3,
-    name: 'SHEEJA K V',
-    qualification: 'M.Sc, B.Ed',
-    subject: 'Biology',
-    category: 'PGT',
+    name: 'JOHNSKUTTY CHACKO',
+    designation: 'ADMINISTRATIVE OFFICER',
+    qualification: 'M.A',
+    professionalQualification: 'B.Ed',
   },
   {
     slNo: 4,
-    name: 'SHYBI V.A',
-    qualification: 'M.A, B.Ed',
-    subject: 'Economics',
-    category: 'PGT',
+    name: 'SHAMLA K.B.',
+    designation: 'PGT',
+    qualification: 'M.A',
+    professionalQualification: 'B.Ed',
   },
   {
     slNo: 5,
-    name: 'SHIBI JOHN',
-    qualification: 'M.A, B.Ed',
-    subject: 'English',
-    category: 'PGT',
+    name: 'FEBINA ABDUL SALAM',
+    designation: 'PGT',
+    qualification: 'M.A',
+    professionalQualification: 'B.Ed',
   },
   {
     slNo: 6,
     name: 'DEEPA T',
-    qualification: 'M.Sc, B.Ed',
-    subject: 'Chemistry',
-    category: 'PGT',
+    designation: 'PGT',
+    qualification: 'M.Sc',
+    professionalQualification: 'B.Ed',
   },
   {
     slNo: 7,
-    name: 'MARY GEETHU A R',
-    qualification: 'M.Sc, B.Ed',
-    subject: 'Maths',
-    category: 'PGT',
+    name: 'SUMAIYA PARVEEN',
+    designation: 'PGT',
+    qualification: 'M.Sc',
+    professionalQualification: 'B.Ed',
   },
   {
     slNo: 8,
-    name: 'PRAKASINI N SHENOY',
-    qualification: 'B.Sc, MCA, B.Ed',
-    subject: 'Computer',
-    category: 'TGT',
+    name: 'SAFNA HABEEB',
+    designation: 'PGT',
+    qualification: 'MCA',
+    professionalQualification: 'MCA',
   },
   {
     slNo: 9,
-    name: 'SHEENA MOL V A',
-    qualification: 'M.Com, B.Ed',
-    subject: 'Accountancy',
-    category: 'PGT',
+    name: 'SHEENA MOL V B',
+    designation: 'PGT',
+    qualification: 'M.Com',
+    professionalQualification: 'M.Com',
   },
   {
     slNo: 10,
-    name: 'JITHU TRAISY',
-    qualification: 'M.Sc, B.Ed',
-    subject: 'Physics',
-    category: 'PGT',
+    name: 'ASHNA P A',
+    designation: 'PGT',
+    qualification: 'M.Sc',
+    professionalQualification: 'B.Ed',
   },
   {
     slNo: 11,
-    name: 'DEVI KRISHNA K A',
-    qualification: 'B.A, MPEd',
-    subject: 'Physical Education',
-    category: 'TGT',
+    name: 'SHIBI JOHN',
+    designation: 'PGT',
+    qualification: 'M.A',
+    professionalQualification: 'B.Ed',
   },
   {
     slNo: 12,
-    name: 'SHABANA T.M',
-    qualification: 'B.Sc, B.Ed',
-    subject: 'Maths',
-    category: 'TGT',
+    name: 'SAJNA V.A',
+    designation: 'TGT',
+    qualification: 'M.A',
+    professionalQualification: 'B.Ed',
   },
   {
     slNo: 13,
-    name: 'FEBIN ABDUL SALAM',
-    qualification: 'M.A, B.Ed',
-    subject: 'English',
-    category: 'PGT',
+    name: 'TREASA BINSI',
+    designation: 'TGT',
+    qualification: 'M.A',
+    professionalQualification: 'B.Ed',
   },
   {
     slNo: 14,
-    name: 'TREASA BINSI P S',
-    qualification: 'M.A, B.Ed',
-    subject: 'Social Science',
-    category: 'PGT',
+    name: 'FATHIMA M A',
+    designation: 'PRT',
+    qualification: 'M.A',
+    professionalQualification: 'B.Ed',
   },
   {
     slNo: 15,
-    name: 'MARY LIYA RAPHAEL',
-    qualification: 'M.A, B.Ed',
-    subject: 'Malayalam',
-    category: 'PGT',
+    name: 'ANJALY VINAYAKUMAR',
+    designation: 'PRT',
+    qualification: 'M.Sc',
+    professionalQualification: 'COUNSELLOR',
+  },
+  {
+    slNo: 16,
+    name: 'SHABANA T.M',
+    designation: 'TGT',
+    qualification: 'M.Sc',
+    professionalQualification: 'B.Ed',
   },
   {
     slNo: 17,
-    name: 'SAJNA V A',
-    qualification: 'M.A, B.Ed',
-    subject: 'Hindi',
-    category: 'PGT',
+    name: 'M.N. MANJU',
+    designation: 'TGT',
+    qualification: 'M.A',
+    professionalQualification: 'B.Ed',
   },
   {
     slNo: 18,
-    name: 'SUNEERA P S',
-    qualification: 'BCA',
-    subject: 'Computer',
-    category: 'Special Staff',
+    name: 'DHANYA S.',
+    designation: 'TGT',
+    qualification: 'B.Sc',
+    professionalQualification: 'B.Ed',
   },
   {
     slNo: 19,
-    name: 'LINCEY MARY PETER P',
-    qualification: 'M.A, B.Ed',
-    subject: 'Malayalam',
-    category: 'PGT',
+    name: 'JESNA A',
+    designation: 'TGT',
+    qualification: 'B.Sc',
+    professionalQualification: 'B.Ed',
   },
   {
     slNo: 20,
-    name: 'M.N. MANJU',
-    qualification: 'M.A, B.Ed',
-    subject: 'Social Science',
-    category: 'PGT',
+    name: 'LINTA GEORGE',
+    designation: 'PRT',
+    qualification: 'M.Sc',
+    professionalQualification: 'B.Ed',
   },
   {
     slNo: 21,
-    name: 'DHANYA S',
-    qualification: 'B.Sc, B.Ed',
-    subject: 'Chemistry',
-    category: 'TGT',
+    name: 'NIROOP RANI',
+    designation: 'PRT',
+    qualification: 'M.A',
+    professionalQualification: 'B.Ed',
   },
   {
     slNo: 22,
-    name: 'JESNA A',
-    qualification: 'B.Sc, B.Ed',
-    subject: 'Maths',
-    category: 'TGT',
+    name: 'SUNIMOL P.S.',
+    designation: 'PRT',
+    qualification: 'B.A',
+    professionalQualification: 'B.A',
   },
   {
     slNo: 23,
     name: 'HASBI RIYAS',
-    qualification: 'B.A, B.Ed',
-    subject: 'Hindi',
-    category: 'TGT',
+    designation: 'PRT',
+    qualification: 'B.A',
+    professionalQualification: 'B.Ed',
   },
   {
     slNo: 24,
-    name: 'AYSHA FARZANA P S',
-    qualification: 'M.A, PPTTC',
-    subject: 'Arabic',
-    category: 'PGT',
+    name: 'THASMI P.B.',
+    designation: 'PRT',
+    qualification: 'BLISC',
+    professionalQualification: 'BLISC',
   },
   {
     slNo: 25,
-    name: 'NIROOP RANI B',
-    qualification: 'M.A, DLED',
-    subject: 'Hindi',
-    category: 'PRT',
+    name: 'JOSMY P L',
+    designation: 'PRT',
+    qualification: 'M.A',
+    professionalQualification: 'B.Ed',
   },
   {
     slNo: 26,
-    name: 'FATHIMA M A',
-    qualification: 'M.A, B.Ed',
-    subject: 'Arabic',
-    category: 'PGT',
+    name: 'THASNIM ALI',
+    designation: 'PRT',
+    qualification: 'B.A',
+    professionalQualification: 'B.Ed',
   },
   {
     slNo: 27,
-    name: 'SUNIMOL P S',
-    qualification: 'B.A, DCA',
-    subject: 'Computer',
-    category: 'Special Staff',
+    name: 'RAHMATH P.H.',
+    designation: 'PRT',
+    qualification: 'AFZAL ULMA',
+    professionalQualification: 'DELED',
   },
   {
     slNo: 28,
-    name: 'JOSMY P L',
-    qualification: 'M.A, B.Ed',
-    subject: 'English',
-    category: 'PGT',
+    name: 'ASWATHY T A',
+    designation: 'PRT',
+    qualification: 'B.Sc',
+    professionalQualification: 'DELED',
   },
   {
     slNo: 29,
-    name: 'JUNAIZA ZAINUDHEEN',
-    qualification: 'M.A, B.Ed',
-    subject: 'English',
-    category: 'PGT',
+    name: 'JYOTHISHA GOPI',
+    designation: 'PRT',
+    qualification: 'B.A',
+    professionalQualification: 'B.A',
   },
   {
     slNo: 30,
-    name: 'FARISA V A',
-    qualification: 'B.Sc, B.Ed',
-    subject: 'Biology',
-    category: 'PGT',
+    name: 'MUHAMMED SHAFI',
+    designation: 'TGT',
+    qualification: 'M.A',
+    professionalQualification: 'B.Ed',
   },
   {
     slNo: 31,
-    name: 'THASMI P B',
-    qualification: 'B.Sc, BLISc, B.Ed',
-    subject: 'Library Science',
-    category: 'TGT',
+    name: 'MINZIA NOUREEN',
+    designation: 'PRT',
+    qualification: 'M.Sc',
+    professionalQualification: 'B.Ed',
   },
   {
     slNo: 32,
-    name: 'SHERIN JOSEPH',
+    name: 'JASEELA TASNIM',
+    designation: 'PRT',
     qualification: 'B.A',
-    subject: 'Counselling',
-    category: 'Special Staff',
+    professionalQualification: 'B.Ed',
   },
   {
     slNo: 33,
-    name: 'SURAJA MANU',
-    qualification: 'CSA, Multimedia',
-    subject: 'Art',
-    category: 'Special Staff',
+    name: 'NAUMIYA JAMAL',
+    designation: 'TGT',
+    qualification: 'B.A',
+    professionalQualification: 'B.Ed',
   },
   {
     slNo: 34,
-    name: 'FASNA BIN HUSSAIN',
-    qualification: 'B.A',
-    subject: 'Music',
-    category: 'Special Staff',
+    name: 'ARUN SELVARAJ',
+    designation: 'PET',
+    qualification: 'M.PEd',
+    professionalQualification: 'M.PEd',
+  },
+  {
+    slNo: 35,
+    name: 'SHEMINA NAZRIN P.K',
+    designation: 'TGT',
+    qualification: 'M.Sc',
+    professionalQualification: 'B.Ed',
   },
 ]
 
 const nonTeachingStaff = [
   {
-    slNo: 35,
-    name: 'NAUMIYA M S',
-    qualification: 'B.A, B.Ed, Tally',
-  },
-  {
     slNo: 36,
-    name: 'FATHIMA M.N',
-    qualification: 'B.Com, Tally',
+    name: 'FIDHA FATHIMA K.S',
+    designation: 'OTHER',
+    qualification: 'B.Com',
+    professionalQualification: 'B.Com',
   },
   {
     slNo: 37,
-    name: 'NASEEMA A A',
-    qualification: 'B.A',
+    name: 'NASEEMA MAHIN A A',
+    designation: 'OTHER',
+    qualification: 'PREDEGREE',
+    professionalQualification: 'PREDEGREE',
   },
   {
     slNo: 38,
     name: 'SUHARA',
-    qualification: 'SSLC',
+    designation: 'OTHER',
+    qualification: '',
+    professionalQualification: '',
   },
   {
     slNo: 39,
     name: 'USHA MOHANAN',
-    qualification: '-',
+    designation: 'OTHER',
+    qualification: '',
+    professionalQualification: '',
   },
   {
     slNo: 40,
-    name: 'NAZEER K A',
-    qualification: 'SSLC',
+    name: 'RENISH',
+    designation: 'OTHER',
+    qualification: '',
+    professionalQualification: '',
   },
   {
     slNo: 41,
-    name: 'RENISH K A',
-    qualification: 'SSLC',
+    name: 'NASEER',
+    designation: 'OTHER',
+    qualification: '',
+    professionalQualification: '',
   },
 ]
 
 export default function TeamPage() {
   return (
     <main className="bg-white">
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-[#1d2555] via-[#2c3575] to-[#4b57b6]">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute -left-20 top-0 h-72 w-72 rounded-full bg-white blur-3xl" />
-          <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-blue-200 blur-3xl" />
-        </div>
+  {/* Hero */}
+  <section className="relative overflow-hidden bg-gradient-to-br from-[#1d2555] via-[#2c3575] to-[#4b57b6]">
+    <div className="absolute inset-0 opacity-20">
+      <div className="absolute -left-20 top-0 h-72 w-72 rounded-full bg-white blur-3xl" />
+      <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-blue-200 blur-3xl" />
+    </div>
 
-        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
-          <div className="max-w-3xl">
-            <Badge className="mb-6 border border-white/20 bg-white/10 px-4 py-1 text-white backdrop-blur-sm hover:bg-white/10">
-              Academic Year 2026–2027
-            </Badge>
+    <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
+      <div className="max-w-3xl">
+        <Badge className="mb-6 border border-white/20 bg-white/10 px-4 py-1 text-white backdrop-blur-sm hover:bg-white/10">
+          Academic Year 2026–2027
+        </Badge>
 
-            <h1 className="text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Our Team
-            </h1>
+        <h1 className="text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
+          Our Team
+        </h1>
 
-            <p className="mt-6 max-w-2xl text-base leading-8 text-slate-200 sm:text-lg">
-              Meet the dedicated teaching and non-teaching staff members of
-              National Public School Kaloor committed to academic excellence,
-              student development, and holistic education.
+        <p className="mt-6 max-w-2xl text-base leading-8 text-slate-200 sm:text-lg">
+          Meet the dedicated teaching and non-teaching staff members of
+          National Public School Kaloor committed to academic excellence,
+          student development, and holistic education.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* Staff Summary */}
+  <section className="bg-white py-16">
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        {[
+          ['Teaching Staff', '35'],
+          ['Non-Teaching Staff', '6'],
+          ['PGT', '11'],
+          ['TGT', '10'],
+          ['PRT', '14'],
+        ].map(([label, value]) => (
+          <div
+            key={label}
+            className="rounded-3xl border border-slate-200 bg-slate-50 p-6"
+          >
+            <p className="text-sm font-medium text-slate-500">
+              {label}
             </p>
-          </div>
-        </div>
-      </section>
 
-      {/* Staff Summary */}
-      <section className="bg-white py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            {[
-              ['Teaching Staff', '33'],
-              ['Non-Teaching Staff', '7'],
-              ['PGT', '20'],
-              ['TGT', '7'],
-              ['PRT', '1'],
-            ].map(([label, value]) => (
-              <div
-                key={label}
-                className="rounded-3xl border border-slate-200 bg-slate-50 p-6"
-              >
-                <p className="text-sm font-medium text-slate-500">
-                  {label}
-                </p>
-
-                <h2 className="mt-2 text-3xl font-black text-slate-900">
-                  {value}
-                </h2>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Teaching Staff */}
-      <section className="bg-slate-50 py-16 sm:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-10">
-            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
-              Teaching Staff
+            <h2 className="mt-2 text-3xl font-black text-slate-900">
+              {value}
             </h2>
-
-            <p className="mt-3 text-slate-600">
-              Faculty members and subject teachers of the school.
-            </p>
           </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
-          <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white">
-            <div className="overflow-x-auto">
-              <Table>
-                <TableHeader>
-                  <TableRow className="bg-slate-100 hover:bg-slate-100">
-                    <TableHead>Sl.No</TableHead>
-                    <TableHead>Name</TableHead>
-                    <TableHead>Qualification</TableHead>
-                    <TableHead>Subject</TableHead>
-                    <TableHead>Category</TableHead>
-                  </TableRow>
-                </TableHeader>
+  {/* Teaching Staff */}
+  <section className="bg-slate-50 py-16 sm:py-20">
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mb-10">
+        <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
+          Teaching Staff
+        </h2>
 
-                <TableBody>
-                  {teachingStaff.map((staff) => (
-                    <TableRow key={staff.slNo}>
-                      <TableCell>{staff.slNo}</TableCell>
+        <p className="mt-3 text-slate-600">
+          Faculty members and academic staff of the school.
+        </p>
+      </div>
 
-                      <TableCell className="font-semibold text-slate-900">
-                        {staff.name}
-                      </TableCell>
+      <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+        <div className="overflow-x-auto">
+          <Table>
+            <TableHeader>
+              <TableRow className="bg-slate-100 hover:bg-slate-100">
+                <TableHead className="w-[80px]">Sl.No</TableHead>
+                <TableHead>Name</TableHead>
+                <TableHead>Designation</TableHead>
+                <TableHead>Qualification</TableHead>
+                <TableHead>Professional Qualification</TableHead>
+              </TableRow>
+            </TableHeader>
 
-                      <TableCell>{staff.qualification}</TableCell>
+            <TableBody>
+              {teachingStaff.map((staff) => (
+                <TableRow key={staff.slNo}>
+                  <TableCell>{staff.slNo}</TableCell>
 
-                      <TableCell>{staff.subject}</TableCell>
+                  <TableCell className="font-semibold text-slate-900">
+                    {staff.name}
+                  </TableCell>
 
-                      <TableCell>
-                        <Badge variant="secondary">
-                          {staff.category}
-                        </Badge>
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </div>
-          </div>
+                  <TableCell>
+                    <Badge
+                      variant="secondary"
+                      className="rounded-full px-3 py-1"
+                    >
+                      {staff.designation}
+                    </Badge>
+                  </TableCell>
+
+                  <TableCell>{staff.qualification}</TableCell>
+
+                  <TableCell>
+                    {staff.professionalQualification}
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
-      {/* Non Teaching Staff */}
-      <section className="bg-white py-16 sm:py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-10">
-            <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
-              Non-Teaching Staff
-            </h2>
+  {/* Non Teaching Staff */}
+  <section className="bg-white py-16 sm:py-20">
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mb-10">
+        <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl">
+          Non-Teaching Staff
+        </h2>
 
-            <p className="mt-3 text-slate-600">
-              Administrative and support staff members.
-            </p>
-          </div>
+        <p className="mt-3 text-slate-600">
+          Administrative and support staff members.
+        </p>
+      </div>
 
-          <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white">
-            <div className="overflow-x-auto">
-              <Table>
-                <TableHeader>
-                  <TableRow className="bg-slate-100 hover:bg-slate-100">
-                    <TableHead>Sl.No</TableHead>
-                    <TableHead>Name</TableHead>
-                    <TableHead>Qualification</TableHead>
-                  </TableRow>
-                </TableHeader>
+      <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+        <div className="overflow-x-auto">
+          <Table>
+            <TableHeader>
+              <TableRow className="bg-slate-100 hover:bg-slate-100">
+                <TableHead className="w-[80px]">Sl.No</TableHead>
+                <TableHead>Name</TableHead>
+                <TableHead>Designation</TableHead>
+                <TableHead>Qualification</TableHead>
+                <TableHead>Professional Qualification</TableHead>
+              </TableRow>
+            </TableHeader>
 
-                <TableBody>
-                  {nonTeachingStaff.map((staff) => (
-                    <TableRow key={staff.slNo}>
-                      <TableCell>{staff.slNo}</TableCell>
+            <TableBody>
+              {nonTeachingStaff.map((staff) => (
+                <TableRow key={staff.slNo}>
+                  <TableCell>{staff.slNo}</TableCell>
 
-                      <TableCell className="font-semibold text-slate-900">
-                        {staff.name}
-                      </TableCell>
+                  <TableCell className="font-semibold text-slate-900">
+                    {staff.name}
+                  </TableCell>
 
-                      <TableCell>{staff.qualification}</TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </div>
-          </div>
+                  <TableCell>
+                    <Badge
+                      variant="outline"
+                      className="rounded-full px-3 py-1"
+                    >
+                      {staff.designation}
+                    </Badge>
+                  </TableCell>
+
+                  <TableCell>
+                    {staff.qualification || '-'}
+                  </TableCell>
+
+                  <TableCell>
+                    {staff.professionalQualification || '-'}
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
         </div>
-      </section>
-    </main>
+      </div>
+    </div>
+  </section>
+</main>
   )
 }

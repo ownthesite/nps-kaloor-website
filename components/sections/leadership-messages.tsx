@@ -95,7 +95,7 @@ export default function LeadershipMessages() {
               {/* Image */}
               <div className="relative shrink-0 w-44 h-56 sm:w-52 sm:h-[280px] rounded-[2rem] overflow-hidden border-2 border-slate-700 shadow-2xl ring-4 ring-white/5">
                 <Image
-                  src="/management/adv-esm-kabeer-haji.jpg"
+                  src="/management/adv-esm-kabeer-haji.jpeg"
                   alt="Manager"
                   fill
                   className="object-cover object-top transition-transform duration-700 group-hover:scale-105"

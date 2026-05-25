@@ -51,32 +51,32 @@ const committeeMembers = [
   {
     name: 'K A Masood',
     role: 'Committee Member',
-    image: '/management/placeholder.jpg',
+    image: '/management/ka-masood.jpeg',
   },
   {
     name: 'Muhammed Raneesh',
     role: 'Committee Member',
-    image: '/management/placeholder.jpg',
+    image: '/management/raneesh.jpeg',
   },
   {
     name: 'Muhammed Ashif T S',
     role: 'Committee Member',
-    image: '/management/placeholder.jpg',
+    image: '/management/ashif.jpeg',
   },
   {
     name: 'K M Abbas',
     role: 'Committee Member',
-    image: '/management/placeholder.jpg',
+    image: '/management/km-abbas.jpeg',
   },
   {
     name: 'K A Riyas',
     role: 'Committee Member',
-    image: '/management/placeholder.jpg',
+    image: '/management/riyas.jpeg',
   },
   {
     name: 'Muneer',
     role: 'Committee Member',
-    image: '/management/placeholder.jpg',
+    image: '/management/muneer.jpeg',
   },
 
   // Real Images
@@ -120,7 +120,7 @@ const committeeMembers = [
   {
     name: 'P A Saheed',
     role: 'Committee Member',
-    image: '/management/placeholder.jpg',
+    image: '/management/saheed.jpeg',
   },
 ]
 

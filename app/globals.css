@@ -1,11 +1,8 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
-@custom-variant dark (&:is(.dark *));
-
 /* =========================================================
-   NPS KALOOR — PREMIUM ACADEMIC THEME
-   Minimal • Elegant • Institutional
+   NPS KALOOR — LIGHT THEME ONLY
 ========================================================= */
 
 :root {
@@ -52,71 +49,6 @@
 
   /* Radius */
   --radius: 1rem;
-
-  /* Sidebar */
-  --sidebar: 255 255 255;
-  --sidebar-foreground: 15 23 42;
-
-  --sidebar-primary: 46 48 146;
-  --sidebar-primary-foreground: 255 255 255;
-
-  --sidebar-accent: 79 70 229;
-  --sidebar-accent-foreground: 255 255 255;
-
-  --sidebar-border: 226 232 240;
-  --sidebar-ring: 46 48 146;
-}
-
-/* =========================================================
-   DARK MODE
-========================================================= */
-
-.dark {
-  --background: 8 15 30;
-  --foreground: 248 250 252;
-
-  --card: 15 23 42;
-  --card-foreground: 248 250 252;
-
-  --popover: 15 23 42;
-  --popover-foreground: 248 250 252;
-
-  --primary: 129 140 248;
-  --primary-foreground: 255 255 255;
-
-  --secondary: 99 102 241;
-  --secondary-foreground: 255 255 255;
-
-  --accent: 212 175 55;
-  --accent-foreground: 15 23 42;
-
-  --muted: 30 41 59;
-  --muted-foreground: 203 213 225;
-
-  --destructive: 248 113 113;
-  --destructive-foreground: 255 255 255;
-
-  --border: 51 65 85;
-  --input: 30 41 59;
-  --ring: 129 140 248;
-
-  --chart-1: 129 140 248;
-  --chart-2: 99 102 241;
-  --chart-3: 212 175 55;
-  --chart-4: 96 165 250;
-  --chart-5: 167 139 250;
-
-  --sidebar: 15 23 42;
-  --sidebar-foreground: 248 250 252;
-
-  --sidebar-primary: 129 140 248;
-  --sidebar-primary-foreground: 255 255 255;
-
-  --sidebar-accent: 212 175 55;
-  --sidebar-accent-foreground: 15 23 42;
-
-  --sidebar-border: 51 65 85;
-  --sidebar-ring: 129 140 248;
 }
 
 /* =========================================================
@@ -183,21 +115,6 @@
   --radius-md: calc(var(--radius) - 3px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 6px);
-
-  /* Sidebar */
-  --color-sidebar: rgb(var(--sidebar));
-  --color-sidebar-foreground: rgb(var(--sidebar-foreground));
-
-  --color-sidebar-primary: rgb(var(--sidebar-primary));
-  --color-sidebar-primary-foreground:
-    rgb(var(--sidebar-primary-foreground));
-
-  --color-sidebar-accent: rgb(var(--sidebar-accent));
-  --color-sidebar-accent-foreground:
-    rgb(var(--sidebar-accent-foreground));
-
-  --color-sidebar-border: rgb(var(--sidebar-border));
-  --color-sidebar-ring: rgb(var(--sidebar-ring));
 }
 
 /* =========================================================
@@ -216,6 +133,7 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: var(--font-sans);
+
     font-feature-settings:
       'rlig' 1,
       'calt' 1;
@@ -234,28 +152,31 @@
   h5,
   h6 {
     font-family: var(--font-heading);
-    @apply  tracking-tight;
+    @apply tracking-tight;
   }
 
   h1 {
-    @apply text-5xl md:text-6xl lg:text-7xl font-extrabold;
+    @apply text-5xl font-extrabold md:text-6xl lg:text-7xl;
+
     line-height: 1;
     letter-spacing: -0.04em;
   }
 
   h2 {
-    @apply text-4xl md:text-5xl font-bold;
+    @apply text-4xl font-bold md:text-5xl;
+
     line-height: 1.05;
     letter-spacing: -0.03em;
   }
 
   h3 {
-    @apply text-2xl md:text-3xl font-semibold;
+    @apply text-2xl font-semibold md:text-3xl;
+
     line-height: 1.1;
   }
 
   h4 {
-    @apply text-xl md:text-2xl font-semibold;
+    @apply text-xl font-semibold md:text-2xl;
   }
 
   p {
@@ -283,17 +204,18 @@
   /* Layout */
 
   .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
   }
 
   .section-padding {
     @apply py-24 md:py-32;
   }
 
-  /* Premium Cards */
+  /* Cards */
 
   .premium-card {
-    @apply bg-card rounded-2xl border border-border;
+    @apply rounded-2xl border border-border bg-card;
+
     box-shadow:
       0 2px 6px rgba(15, 23, 42, 0.03),
       0 8px 24px rgba(15, 23, 42, 0.04);
@@ -378,11 +300,5 @@
     -webkit-backdrop-filter: blur(14px);
 
     border-bottom: 1px solid rgba(226, 232, 240, 0.75);
-  }
-
-  .dark .navbar-blur {
-    background: rgba(15, 23, 42, 0.82);
-
-    border-bottom: 1px solid rgba(51, 65, 85, 0.7);
   }
 }
