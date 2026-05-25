@@ -132,10 +132,26 @@ export function Footer() {
                 </div>
 
                 <a
-                  href="tel:+91-484-2396789"
+                  href="tel:+914842539088"
                   className="font-medium text-slate-300 transition-colors hover:text-white"
                 >
-                  +91-484-2396789
+                  +91 484 253 9088
+                </a>
+              </li>
+
+              <li className="flex items-center gap-3">
+                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-white/10 backdrop-blur-sm">
+                  <Phone
+                    size={16}
+                    className="text-white"
+                  />
+                </div>
+
+                <a
+                  href="tel:+917560981234"
+                  className="font-medium text-slate-300 transition-colors hover:text-white"
+                >
+                  +91 75609 81234
                 </a>
               </li>
 

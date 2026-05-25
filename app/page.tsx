@@ -101,7 +101,7 @@ export default function Home() {
 
                 {/* Phone */}
                 <a
-                  href="tel:04842539088"
+                  href="tel:+914842539088"
                   className="rounded-3xl border border-slate-200 bg-slate-50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#f9b916]/40 hover:shadow-lg"
                 >
                   <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[#f9b916]/10 text-[#0c2d83]">
@@ -112,9 +112,15 @@ export default function Home() {
                     Contact Number
                   </h3>
 
-                  <p className="mt-2 text-sm font-medium text-slate-600">
-                    Ph: 0484-2539088
-                  </p>
+                  <div className="mt-3 space-y-1">
+                    <p className="text-sm font-medium text-slate-600">
+                      +91 484 253 9088
+                    </p>
+
+                    <p className="text-sm font-medium text-slate-600">
+                      +91 75609 81234
+                    </p>
+                  </div>
                 </a>
 
               </div>

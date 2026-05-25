@@ -52,7 +52,7 @@ const generalInformation = [
   ],
   ["Website", "https://www.npskaloor.com"],
   ["Email", "nps.kaloor@gmail.com"],
-  ["Contact Number", "0484-2539088"],
+  ["Contact Number", "0484-2539088, +91 7560981234"],
   ["Affiliation Validity", "01/04/2025 to 31/03/2030"],
 ];
 
