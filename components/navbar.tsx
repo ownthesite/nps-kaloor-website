@@ -31,7 +31,7 @@ const navItems = [
       { label: "Admissions", href: "/administration/admissions" },
       { label: "Fee Structure", href: "/administration/fee-structure" },
       {
-        label: "School Management Committee",
+        label: "Management Committee",
         href: "/administration/smc",
       },
       { label: "PTA", href: "/administration/pta" },

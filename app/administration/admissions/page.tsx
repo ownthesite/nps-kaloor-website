@@ -37,17 +37,13 @@ const schoolHours = [
 
 const uniforms = [
   {
-    classes: 'Classes I – III',
+    classes: 'Classes I – IV',
     boys: 'Shorts & Shirt',
     girls: 'Pinafore with Shirt',
   },
+  
   {
-    classes: 'Classes IV – VI',
-    boys: 'Shirt & Two Pleated Pants',
-    girls: 'Sleeveless Coat with Full Sleeve Shirt & Pants',
-  },
-  {
-    classes: 'Classes VII – X',
+    classes: 'Classes V – X',
     boys: 'Shirt & Two Pleated Pants',
     girls: 'Churidhar with Coat',
   },

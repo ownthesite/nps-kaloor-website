@@ -71,6 +71,9 @@ const streams = [
       'Mathematics',
       'Biology',
       'Computer Science',
+      'Applied Mathematics',
+      'Informatics Practices',
+
     ],
     icon: FlaskConical,
   },
@@ -81,6 +84,9 @@ const streams = [
       'Business Studies',
       'Economics',
       'Computer Applications',
+      'Mathematics',
+      'Applied Mathematics',
+      'Informatics Practices',
     ],
     icon: Calculator,
   },
@@ -90,6 +96,7 @@ const languages = [
   'English',
   'Hindi',
   'Malayalam',
+  'Arabic'
 ]
 
 const methodology = [
@@ -97,7 +104,7 @@ const methodology = [
   'Smart classroom integration',
   'Continuous assessment and evaluation',
   'Experiential and project-based learning',
-  'Academic and co-curricular balance',
+  'Co-curricular and Holistic Approach',
   'Individual student mentoring and guidance',
 ]
 

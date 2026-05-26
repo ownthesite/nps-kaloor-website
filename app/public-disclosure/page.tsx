@@ -154,6 +154,7 @@ const infrastructureDetails = [
   ],
   ["Smart Classrooms", "1"],
   ["Library", "1"],
+  ["Sick Room", "1"],
 ];
 
 function StatusBadge({ status }: { status: string }) {

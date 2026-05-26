@@ -103,7 +103,7 @@ const ptaMembers = [
     slNo: 15,
     name: 'Sheeja K V',
     designation: 'Vice Principal',
-    mobile: '-',
+    mobile: '9495126207',
   },
 ]
 
