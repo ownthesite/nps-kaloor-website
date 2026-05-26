@@ -141,7 +141,7 @@ export default function SMCPage() {
             </Badge>
 
             <h1 className="text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
-              School Management Committee
+              Management Committee
             </h1>
 
             <p className="mt-6 max-w-2xl text-base leading-8 text-slate-200 sm:text-lg">

@@ -7,7 +7,10 @@ import {
   Check,
   Clock3,
   FileText,
+  Globe,
   GraduationCap,
+  Mail,
+  Phone,
   Shirt,
 } from 'lucide-react'
 
@@ -15,6 +18,8 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { EnquiryForm } from '@/components/enquiry-form'
+import { FadeUp } from '@/components/animations/fade-up'
+import { SectionHeader } from '@/components/section-header'
 
 
 
@@ -22,6 +27,7 @@ const requiredDocuments = [
   'Photo copy of Birth Certificate',
   'Passport-size photograph affixed on application form',
   'Transfer Certificate (if applicable)',
+  'Aadhaar Card',
 ]
 
 const schoolHours = [
@@ -35,19 +41,29 @@ const schoolHours = [
   },
 ]
 
-const uniforms = [
-  {
-    classes: 'Classes I – IV',
-    boys: 'Shorts & Shirt',
-    girls: 'Pinafore with Shirt',
-  },
-  
-  {
-    classes: 'Classes V – X',
-    boys: 'Shirt & Two Pleated Pants',
-    girls: 'Churidhar with Coat',
-  },
-]
+const uniforms = {
+  boys: [
+    {
+      classes: 'Classes I – III',
+      uniform: 'Shorts & Shirt',
+    },
+    {
+      classes: 'Classes IV – X',
+      uniform: 'Shirt & Two Pleated Pants',
+    },
+  ],
+
+  girls: [
+    {
+      classes: 'Classes I – IV',
+      uniform: 'Pinafore with Shirt',
+    },
+    {
+      classes: 'Classes V – X',
+      uniform: 'Sleeveless Coat with Full Sleeve Shirt & Pants',
+    },
+  ],
+}
 
 export default function AdmissionsPage() {
   return (
@@ -224,37 +240,54 @@ export default function AdmissionsPage() {
             </h2>
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-3">
-            {uniforms.map((uniform) => (
-              <Card
-                key={uniform.classes}
-                className="rounded-3xl border border-slate-200 shadow-none bg-white"
-              >
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-bold text-slate-900">
-                    {uniform.classes}
-                  </h3>
+          <div className="grid gap-6 lg:grid-cols-2">
+            {/* Boys */}
+            <Card className="rounded-3xl border border-slate-200 shadow-none bg-white">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-slate-900">Boys</h3>
 
-                  <div className="mt-6 space-y-5">
-                    <div>
-                      <p className="text-sm text-slate-500">Boys</p>
+                <div className="mt-6 space-y-6">
+                  {uniforms.boys.map((item) => (
+                    <div
+                      key={item.classes}
+                      className="border-b border-slate-100 pb-5 last:border-none last:pb-0"
+                    >
+                      <p className="text-sm font-medium text-slate-500">
+                        {item.classes}
+                      </p>
 
-                      <p className="mt-1 text-slate-700 leading-7">
-                        {uniform.boys}
+                      <p className="mt-2 text-slate-700 leading-7">
+                        {item.uniform}
                       </p>
                     </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
 
-                    <div>
-                      <p className="text-sm text-slate-500">Girls</p>
+            {/* Girls */}
+            <Card className="rounded-3xl border border-slate-200 shadow-none bg-white">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-slate-900">Girls</h3>
 
-                      <p className="mt-1 text-slate-700 leading-7">
-                        {uniform.girls}
+                <div className="mt-6 space-y-6">
+                  {uniforms.girls.map((item) => (
+                    <div
+                      key={item.classes}
+                      className="border-b border-slate-100 pb-5 last:border-none last:pb-0"
+                    >
+                      <p className="text-sm font-medium text-slate-500">
+                        {item.classes}
+                      </p>
+
+                      <p className="mt-2 text-slate-700 leading-7">
+                        {item.uniform}
                       </p>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           <Card className="mt-6 rounded-3xl border border-slate-200 shadow-none bg-white">
@@ -272,55 +305,100 @@ export default function AdmissionsPage() {
           </Card>
         </div>
       </section>
-
       {/* Enquiry Form */}
       <section
-        id="enquiry-form"
-        className="py-16 sm:py-20 bg-white"
+        id="contact-info"
+        className="relative overflow-hidden border-t border-slate-200 bg-slate-50 py-20 sm:py-28"
       >
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
-              Enquire About Admissions
-            </h2>
+        {/* Background Glow */}
+        <div className="absolute left-1/2 top-0 -z-10 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-gradient-to-b from-slate-200/50 to-transparent blur-3xl" />
 
-            <p className="mt-4 text-slate-600 leading-8">
-              Submit your details and we&apos;ll contact you soon.
-            </p>
-          </div>
+        <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <FadeUp>
+            <SectionHeader
+              title="Get in Touch"
+              subtitle="Reach out to us for admissions and school enquiries"
+            />
+          </FadeUp>
 
-          <div className="mt-12 bg-slate-50 p-8 rounded-3xl border border-slate-200">
-            <EnquiryForm />
-          </div>
-        </div>
-      </section>
+          <FadeUp delay={0.2}>
+            <div className="group relative mt-10 overflow-hidden rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-xl shadow-slate-200/50 transition-all duration-500 hover:shadow-2xl hover:shadow-slate-200/60 sm:mt-12 sm:p-12">
 
-      {/* CTA */}
-      <section className="pb-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="rounded-3xl border border-slate-200 shadow-none bg-slate-50">
-            <CardContent className="p-10 text-center">
-              <h2 className="text-3xl font-bold text-slate-900">
-                Need Assistance With Admissions?
-              </h2>
+              {/* Decorative Glow */}
+              <div className="absolute -right-20 -top-20 h-40 w-40 rounded-full bg-[#f9b916]/10 blur-[40px] transition-all duration-500 group-hover:bg-[#f9b916]/20" />
+              <div className="absolute -bottom-20 -left-20 h-40 w-40 rounded-full bg-slate-300/20 blur-[40px]" />
 
-              <p className="mt-4 max-w-2xl mx-auto text-slate-600 leading-8">
-                For admission enquiries and further assistance, please contact
-                the school office.
-              </p>
+              {/* Content */}
+              <div className="relative z-10 grid gap-8 sm:grid-cols-3">
 
-              <div className="mt-8 flex justify-center">
-                <Button asChild size="lg" className="rounded-xl px-6">
-                  <Link href="/contact">
-                    Contact Us
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
+                {/* Website */}
+                <a
+                  href="https://www.npskaloor.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-3xl border border-slate-200 bg-slate-50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#f9b916]/40 hover:shadow-lg"
+                >
+                  <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[#f9b916]/10 text-[#0c2d83]">
+                    <Globe className="h-7 w-7" />
+                  </div>
+
+                  <h3 className="text-lg font-semibold text-slate-900">
+                    Website
+                  </h3>
+
+                  <p className="mt-2 break-all text-sm text-slate-600">
+                    www.npskaloor.com
+                  </p>
+                </a>
+
+                {/* Email */}
+                <a
+                  href="mailto:nps.kaloor@gmail.com"
+                  className="rounded-3xl border border-slate-200 bg-slate-50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#f9b916]/40 hover:shadow-lg"
+                >
+                  <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[#f9b916]/10 text-[#0c2d83]">
+                    <Mail className="h-7 w-7" />
+                  </div>
+
+                  <h3 className="text-lg font-semibold text-slate-900">
+                    Email
+                  </h3>
+
+                  <p className="mt-2 break-all text-sm text-slate-600">
+                    nps.kaloor@gmail.com
+                  </p>
+                </a>
+
+                {/* Phone */}
+                <a
+                  href="tel:+914842539088"
+                  className="rounded-3xl border border-slate-200 bg-slate-50 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#f9b916]/40 hover:shadow-lg"
+                >
+                  <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[#f9b916]/10 text-[#0c2d83]">
+                    <Phone className="h-7 w-7" />
+                  </div>
+
+                  <h3 className="text-lg font-semibold text-slate-900">
+                    Contact Number
+                  </h3>
+
+                  <div className="mt-3 space-y-1">
+                    <p className="text-sm font-medium text-slate-600">
+                      +91 484 253 9088
+                    </p>
+
+                    <p className="text-sm font-medium text-slate-600">
+                      +91 75609 81234
+                    </p>
+                  </div>
+                </a>
+
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </FadeUp>
         </div>
       </section>
+
     </main>
   )
 }

@@ -36,7 +36,7 @@ const navItems = [
       },
       { label: "PTA", href: "/administration/pta" },
       { label: "Circulars & Notices", href: "/administration/circulars" },
-      { label: "Rules & Regulations", href: "/administration/rules" },
+      { label: "Code of Conduct", href: "/administration/rules" },
     ],
   },
 

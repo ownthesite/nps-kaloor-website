@@ -131,9 +131,7 @@ export default function HeroSection() {
               >
                 <button
                   onClick={() => {
-                    document.getElementById("enquiry-form")?.scrollIntoView({
-                      behavior: "smooth",
-                    });
+                    window.location.href = "/#contact-info";
                   }}
                   className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-slate-950 px-8 py-4 text-sm font-semibold text-white transition hover:bg-slate-800 sm:w-auto"
                 >
@@ -141,13 +139,13 @@ export default function HeroSection() {
                   <ArrowRight size={18} />
                 </button>
 
-                <a
-                  href="/about"
+                {/* <a
+                  href="/"
                   className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-slate-300 bg-white/70 px-8 py-4 text-sm font-semibold text-slate-700 backdrop-blur transition hover:bg-white sm:w-auto"
                 >
                   Explore School
                   <ArrowRight size={18} />
-                </a>
+                </a> */}
               </motion.div>
 
               {/* Stats */}
