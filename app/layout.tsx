@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/next'
 
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { FloatingWhatsapp } from "@/components/floating-whatsapp";
 
 import { ScrollToTop } from "@/components/scroll-to-top";
 
@@ -71,6 +72,8 @@ export default function RootLayout({
         </main>
 
         <Footer />
+
+        <FloatingWhatsapp />
 
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
