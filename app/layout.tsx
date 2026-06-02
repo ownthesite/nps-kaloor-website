@@ -53,6 +53,8 @@ export const metadata: Metadata = {
   manifest: '/site.webmanifest',
 }
 
+const MAINTENANCE_MODE = true;
+
 export default function RootLayout({
   children,
 }: {
@@ -64,18 +66,30 @@ export default function RootLayout({
       className={`${inter.variable} ${manrope.variable} ${geistMono.variable}`}
     >
       <body className="bg-background font-sans text-foreground antialiased">
-        <ScrollToTop />
-        <Navbar />
+        {MAINTENANCE_MODE ? (
+          <main className="flex min-h-screen items-center justify-center px-6">
+            <div className="text-center">
+              <h1 className="text-4xl font-bold">
+                Website Under Maintenance
+              </h1>
 
-        <main>
-          {children}
-        </main>
+              <p className="mt-4 text-slate-600">
+                We are currently upgrading our website.
+                Please visit again shortly.
+              </p>
+            </div>
+          </main>
+        ) : (
+          <>
+            <ScrollToTop />
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+            <FloatingWhatsapp />
+          </>
+        )}
 
-        <Footer />
-
-        <FloatingWhatsapp />
-
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+        {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>
   )
