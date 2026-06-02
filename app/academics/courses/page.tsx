@@ -314,32 +314,8 @@ export default function CoursesPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="rounded-3xl border border-slate-200 shadow-none bg-slate-50">
-            <CardContent className="p-10 text-center">
-              <h2 className="text-3xl font-bold text-slate-900">
-                Need Academic Guidance?
-              </h2>
-
-              <p className="mt-4 max-w-2xl mx-auto text-slate-600 leading-8">
-                Contact the academic office for detailed information regarding
-                curriculum, streams, and subject selection.
-              </p>
-
-              <div className="mt-8 flex justify-center">
-                <Button asChild size="lg" className="rounded-xl px-6">
-                  <Link href="/contact">
-                    Contact Us
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
+      
+      
     </main>
   )
 }

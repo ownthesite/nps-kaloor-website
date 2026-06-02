@@ -3,7 +3,7 @@ import { permanentRedirect } from 'next/navigation'
 export const metadata = {
   title: 'Curriculum | NPS Kaloor',
   description:
-    'Official CBSE Curriculum 2025–26 followed by National Public School Kaloor.',
+    'Official CBSE Curriculum 2026–27 followed by National Public School Kaloor.',
 }
 
 export default function CurriculumPage() {

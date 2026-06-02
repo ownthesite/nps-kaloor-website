@@ -11,7 +11,7 @@ import {
 export const metadata = {
   title: 'PTA | NPS Kaloor',
   description:
-    'Parent Teacher Association members of National Public School Kaloor for the academic year 2025–2026.',
+    'Parent Teacher Association members of National Public School Kaloor for the academic year 2026–2027.',
 }
 
 const ptaMembers = [
@@ -121,7 +121,7 @@ export default function PTAPage() {
         <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
           <div className="max-w-3xl">
             <Badge className="mb-6 border border-white/20 bg-white/10 px-4 py-1 text-white backdrop-blur-sm hover:bg-white/10">
-              Academic Year 2025–2026
+              Academic Year 2026–2027
             </Badge>
 
             <h1 className="text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
@@ -145,7 +145,7 @@ export default function PTAPage() {
             </h2>
 
             <p className="mt-3 text-slate-600">
-              Parent Teacher Association Members 2025–2026
+              Parent Teacher Association Members 2026–2027
             </p>
           </div>
 
