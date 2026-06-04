@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   manifest: '/site.webmanifest',
 }
 
-const MAINTENANCE_MODE = true;
+const MAINTENANCE_MODE = false;
 
 export default function RootLayout({
   children,
